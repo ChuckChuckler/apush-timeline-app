@@ -2,6 +2,7 @@
     import Period from "$lib/comps/Period.svelte";
 
     let includedEvents:string[]=$state([]);
+    let includedPeriodsElements:any[]=$state([]);
 
     let display1600s:string=$state("display:none");
     let display1700s:string=$state("display:none");
@@ -286,7 +287,7 @@
 
     function checkAll(century:string, checked:boolean){
         let century1600:string[] = ["First half of 1600s", "Second half of 1600s"];
-        let century1700:string[] = ["1700-60", "1770-79", "1780-89", "1790-99"];
+        let century1700:string[] = ["1700-60", "1760-69", "1770-79", "1780-89", "1790-99"];
         let century1800:string[] = ["1800-19", "1820-29", "1830-39", "1840-49", "1850-59", "1860-69", "1870-79", "1880-89", "1890-99"];
         let century1900:string[] = ["1900-09", "1910-19", "1920-29", "1930-39", "1940-49", "1950-59", "1960-69", "1970-79", "1980-89", "1990-99"];
 
@@ -333,14 +334,58 @@
         return arrSorted;
     }
 
-    let practicedTerms = [];
-    let unusedTerms = [];
+    let practicedTerms:string[] = [];
+    let unusedTerms:string[] = [];
+    let chosenEvent:string = $state("");
 
-    function practice(){
+    function startPractice(){
         practiceDiv="display:block";
         settingsDiv="display:none";
+        for(let i of includedEvents){
+            for(let j of events[i]){
+                unusedTerms.push(j);
+            }
+        }
+
+        practice();
     }
     
+    let resultsBtn = $state("display:none");
+
+    function practice(){
+        if(unusedTerms.length==0){
+            resultsBtn="display:block";
+            chosenEvent="";
+        }else{
+            chosenEvent = unusedTerms[Math.floor(Math.random()*unusedTerms.length)];
+            practicedTerms.push(chosenEvent);
+            unusedTerms.splice(unusedTerms.indexOf(chosenEvent),1);
+        }
+    }
+
+    function classifyTerm(element:any){
+        element.addEvent(chosenEvent);
+        practice();
+    }
+    
+    function showResults(){
+        let corrects:string[]=[];
+        let incorrects:string[]=[];
+
+        for(let i in includedEvents){
+            let period = includedEvents[i];
+            let periodElements = includedPeriodsElements[i].getEvents();
+            for(let i of periodElements){
+                if(events[period].includes(i)){
+                    console.log("correct!!!");
+                    corrects.push(i);
+                }else{
+                    console.log("incorrect..");
+                    incorrects.push(i);
+                }
+            }
+        }
+    }
 </script>
 
 <h1 class="text-center">Really fun practice app (so much fun)</h1>
@@ -474,16 +519,16 @@
             <br>
         </div>
     </div>
+    <br>
+    <button class="block m-auto bg-blue-100" onclick={startPractice}>Go!</button>
 </div>
 
 <div class="w-[80%] h-[100vh] m-auto bg-red-100 overflow-auto" style={practiceDiv}>
+    <h1 class="text-center">{chosenEvent}</h1>
+    <button class="block m-auto" style={resultsBtn} onclick={showResults}>See results</button>
     <div class="grid grid-cols-3 gap-[15px]">
-        {#each includedEvents as period}
-            <Period periodName={period} eventsAdded={[]}></Period>
+        {#each includedEvents as period,i}
+            <Period bind:this={includedPeriodsElements[i]} periodName={period} eventsAdded={[]} click={function(){classifyTerm(includedPeriodsElements[i])}}></Period>
         {/each}
     </div>
 </div>
-
-<br>
-
-<button class="block m-auto bg-blue-100" onclick={practice}>Go!</button>
