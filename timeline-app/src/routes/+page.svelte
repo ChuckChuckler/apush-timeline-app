@@ -358,12 +358,12 @@
         if(unusedTerms.length==0){
             resultsBtn="display:block";
             chosenEvent="";
+        }
+
+        if(customTerm!==""){
+            chosenEvent=customTerm;
         }else{
-            if(customTerm!==""){
-                chosenEvent=customTerm;
-            }else{
-                chosenEvent=unusedTerms[Math.floor(Math.random()*unusedTerms.length)];
-            }
+            unusedTerms.length==0?chosenEvent="":chosenEvent=unusedTerms[Math.floor(Math.random()*unusedTerms.length)];
         }
     }
 
