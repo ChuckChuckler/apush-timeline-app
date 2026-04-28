@@ -349,25 +349,29 @@
             }
         }
 
-        practice();
+        practice("");
     }
     
     let resultsBtn = $state("display:none");
 
-    function practice(){
+    function practice(customTerm:string){
         if(unusedTerms.length==0){
             resultsBtn="display:block";
             chosenEvent="";
         }else{
-            chosenEvent = unusedTerms[Math.floor(Math.random()*unusedTerms.length)];
-            practicedTerms.push(chosenEvent);
-            unusedTerms.splice(unusedTerms.indexOf(chosenEvent),1);
+            if(customTerm!==""){
+                chosenEvent=customTerm;
+            }else{
+                chosenEvent=unusedTerms[Math.floor(Math.random()*unusedTerms.length)];
+            }
         }
     }
 
     function classifyTerm(element:any){
+        practicedTerms.push(chosenEvent);
+        unusedTerms.indexOf(chosenEvent)==-1?unusedTerms.splice(unusedTerms.indexOf(chosenEvent),0):unusedTerms.splice(unusedTerms.indexOf(chosenEvent),1);
         element.addEvent(chosenEvent);
-        practice();
+        practice("");
     }
 
     let resultsPeriods:any[]=$state([]);
@@ -536,7 +540,7 @@
     <button class="block m-auto" style={resultsBtn} onclick={showResults}>See results</button>
     <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[90%] box-border p-[10px]">
         {#each includedEvents as period,i}
-            <Period bind:this={includedPeriodsElements[i]} periodName={period} eventsAdded={[]} click={function(){classifyTerm(includedPeriodsElements[i])}}></Period>
+            <Period bind:this={includedPeriodsElements[i]} periodName={period} eventsAdded={[]} click={function(){classifyTerm(includedPeriodsElements[i])}} replaceEvent={practice}></Period>
         {/each}
     </div>
 </div>
