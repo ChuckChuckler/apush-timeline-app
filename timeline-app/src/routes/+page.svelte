@@ -1,5 +1,6 @@
 <script lang="ts">
     import Period from "$lib/comps/Period.svelte";
+    import ResultPeriod from "$lib/comps/ResultPeriod.svelte";
 
     let includedEvents:string[]=$state([]);
     let includedPeriodsElements:any[]=$state([]);
@@ -270,6 +271,7 @@
     }
 
     let practiceDiv:string=$state("display:none");
+    let resultsDiv:string=$state("display:none");
     let settingsDiv:string=$state("display:block");
 
     function include(period:string, checked:boolean){
@@ -367,30 +369,36 @@
         element.addEvent(chosenEvent);
         practice();
     }
+
+    let resultsPeriods:any[]=$state([]);
     
     function showResults(){
         let corrects:string[]=[];
         let incorrects:string[]=[];
-
         for(let i in includedEvents){
             let period = includedEvents[i];
             let periodElements = includedPeriodsElements[i].getEvents();
-            for(let i of periodElements){
-                if(events[period].includes(i)){
+            for(let j of periodElements){
+                if(events[period].includes(j)){
                     console.log("correct!!!");
-                    corrects.push(i);
+                    corrects.push(j);
+                    resultsPeriods[i].addCorrect(j);
                 }else{
                     console.log("incorrect..");
-                    incorrects.push(i);
+                    incorrects.push(j);
+                    resultsPeriods[i].addIncorrect(j);
                 }
             }
         }
+
+        practiceDiv="display:none";
+        resultsDiv="display:block";
     }
 </script>
 
 <h1 class="text-center">Really fun practice app (so much fun)</h1>
 
-<div class="w-[50%] m-auto" style={settingsDiv}>
+<div class="w-[50%] m-auto" style={settingsDiv}> <!--settings-->
     <div>
         <h3 class="text-center">practice type</h3>
         <div class="w-[60%] m-auto">
@@ -401,7 +409,7 @@
             <label for="test">practice</label>
         </div>
     </div>
-    <div>
+    <div> 
         <h3 class="text-center">include events from:</h3>
         <div>
             <input type="checkbox" name="Pre-1600" id="Pre-1600" value="Pre-1600" onchange={function(){include("Pre-1600", this.checked==undefined?false:this.checked)}}>
@@ -523,12 +531,22 @@
     <button class="block m-auto bg-blue-100" onclick={startPractice}>Go!</button>
 </div>
 
-<div class="w-[80%] h-[100vh] m-auto bg-red-100 overflow-auto" style={practiceDiv}>
+<div class="w-[80%] h-[100vh] m-auto bg-red-300" style={practiceDiv}> <!--events classification-->
     <h1 class="text-center">{chosenEvent}</h1>
     <button class="block m-auto" style={resultsBtn} onclick={showResults}>See results</button>
-    <div class="grid grid-cols-3 gap-[15px]">
+    <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[90%] box-border p-[10px]">
         {#each includedEvents as period,i}
             <Period bind:this={includedPeriodsElements[i]} periodName={period} eventsAdded={[]} click={function(){classifyTerm(includedPeriodsElements[i])}}></Period>
+        {/each}
+    </div>
+</div>
+
+<div class="w-[80%] h-[100vh] m-auto bg-red-300" style={resultsDiv}> <!--results-->
+    <h1 class="text-center">{chosenEvent}</h1>
+    <button class="block m-auto" style={resultsBtn} onclick={showResults}>See results</button>
+    <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[90%] box-border p-[10px]">
+        {#each includedEvents as period,i}
+            <ResultPeriod bind:this={resultsPeriods[i]} periodName={period} correctEvents={[]} incorrectEvents={[]}></ResultPeriod>
         {/each}
     </div>
 </div>

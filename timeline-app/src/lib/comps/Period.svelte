@@ -2,13 +2,18 @@
     import { onMount } from "svelte";
 
     let { periodName, eventsAdded, click } = $props();
+
     let events:string[] = $state([]);
 
     let container:any;
 
     onMount(()=>{
         events=eventsAdded;
-        container.onclick=click;
+        container.addEventListener("click", (e:MouseEvent)=>{
+            if(e.target==container){
+                click();
+            }
+        });
     });
 
     export function addEvent(event:string){
@@ -20,11 +25,11 @@
     }
 </script>
 
-<div class="bg-red-300 h-[20vw] overflow-auto" bind:this={container}>
+<div class="bg-red-100 h-[20vw] overflow-auto" bind:this={container}>
     <h1>{periodName}</h1>
     <ul>
         {#each events as e}
-            <li>{e}</li>
+            <button style="z-index: 5;" class="bg-blue-300">{e}</button>
         {/each}
     </ul>
 </div>
