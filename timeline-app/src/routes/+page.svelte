@@ -1,5 +1,7 @@
 <script lang="ts">
-    let includedEvents:string[]=[]
+    import Period from "$lib/comps/Period.svelte";
+
+    let includedEvents:string[]=$state([]);
 
     let display1600s:string=$state("display:none");
     let display1700s:string=$state("display:none");
@@ -266,6 +268,9 @@
         ]
     }
 
+    let practiceDiv:string=$state("display:none");
+    let settingsDiv:string=$state("display:block");
+
     function include(period:string, checked:boolean){
         if(checked){
             includedEvents.push(period);
@@ -303,7 +308,7 @@
 
         if(checked){
             for(let i in chosenCentury){
-                includedEvents.push(chosenCentury[i])
+                includedEvents.push(chosenCentury[i]);
             }
         }else{
             for(let i in chosenCentury){
@@ -311,12 +316,36 @@
             }
         }
 
-        console.log(includedEvents);
+        includedEvents = sort(includedEvents);
+        if(includedEvents.includes("Pre-1600")){
+            includedEvents.splice(includedEvents.indexOf("Pre-1600"), 1);
+            includedEvents.unshift("Pre-1600");
+        }
+    }
+
+    function sort(arr:string[]){
+        let arrSorted = arr.sort((a,b)=>{
+            if(/^[0-9]/.test(a[0]) && !/^[0-9]/.test(b[0])) return 1;
+            if(!/^[0-9]/.test(a[0]) && /^[0-9]/.test(b[0])) return -1;
+            return a[0].localeCompare(b[0],undefined,{ numeric: true});
+        });
+
+        return arrSorted;
+    }
+
+    let practicedTerms = [];
+    let unusedTerms = [];
+
+    function practice(){
+        practiceDiv="display:block";
+        settingsDiv="display:none";
     }
     
 </script>
+
 <h1 class="text-center">Really fun practice app (so much fun)</h1>
-<div class="w-[50%] m-auto">
+
+<div class="w-[50%] m-auto" style={settingsDiv}>
     <div>
         <h3 class="text-center">practice type</h3>
         <div class="w-[60%] m-auto">
@@ -446,3 +475,15 @@
         </div>
     </div>
 </div>
+
+<div class="w-[80%] h-[100vh] m-auto bg-red-100 overflow-auto" style={practiceDiv}>
+    <div class="grid grid-cols-3 gap-[15px]">
+        {#each includedEvents as period}
+            <Period periodName={period} eventsAdded={[]}></Period>
+        {/each}
+    </div>
+</div>
+
+<br>
+
+<button class="block m-auto bg-blue-100" onclick={practice}>Go!</button>
