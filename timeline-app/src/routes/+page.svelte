@@ -290,10 +290,12 @@
         }
     }
 
+    let check1400s:boolean=$state(false);
     let checkAll1600s:boolean=$state(false);
     let checkAll1700s:boolean=$state(false);
     let checkAll1800s:boolean=$state(false);
     let checkAll1900s:boolean=$state(false);
+    let check2000s:boolean=$state(false);
 
     function checkAll(century:string, checked:boolean){
         let century1600:string[] = ["First half of 1600s", "Second half of 1600s"];
@@ -435,14 +437,18 @@
     }
 
     function showSettings(){
-        /*settingsDiv="display:block";
+        settingsDiv="display:block";
         resultsDiv="display:none";
         includedEvents=[];
         includedPeriodsElements=[];
         practicedTerms = [];
         unusedTerms = [];
-        chosenEvent = "";*/
-        alert("hii so um this is broken rn </3 just reload the page i swear i'm working on it");
+        chosenEvent = "";
+        checkAll1600s=false;
+        checkAll1700s=false;
+        checkAll1800s=false;
+        checkAll1900s=false;
+        //alert("hii so um this is broken rn </3 just reload the page i swear i'm working on it");
     }
 </script>
 
@@ -469,12 +475,12 @@
         <div class="bg-[#767493] rounded-[20px] w-[70%] h-[58vh] m-auto overflow-auto box-border p-[15px]"> 
             <h3 class="text-center text-white kaisei-tokumin-regular">include events from:</h3>
             <div>
-                <input class="accent-[#49437a]" type="checkbox" name="Pre-1600" id="Pre-1600" value="Pre-1600" onchange={function(){include("Pre-1600", this.checked==undefined?false:this.checked)}}>
+                <input bind:checked={check1400s} class="accent-[#49437a]" type="checkbox" name="Pre-1600" id="Pre-1600" value="Pre-1600" onchange={function(){include("Pre-1600", this.checked==undefined?false:this.checked)}}>
                 <label for="Pre-1600" class="arimo text-white text-[18px]">Pre-1600</label>
                 <br>
                 <br>
 
-                <input class="accent-[#49437a]" type="checkbox" name="1600s" value="1600s" id="1600s" onchange={function(){this.checked==true?checkAll("1600s", true):checkAll("1600s",false)}}>
+                <input bind:checked={checkAll1600s} class="accent-[#49437a]" type="checkbox" name="1600s" value="1600s" id="1600s" onchange={function(){this.checked==true?checkAll("1600s", true):checkAll("1600s",false)}}>
                 <label for="1600s" class="arimo text-white text-[18px]">1600s</label>
                 <button class="text-[12px] box-border p-[5px] text-white" onclick={function(){display1600s=="display:none"?display1600s="display:block":display1600s="display:none"}}>expand/close</button>
                 <div class="bg-[#908EAC] w-[40%] rounded-[15px] box-border p-[15px]" style={display1600s}>
@@ -487,7 +493,7 @@
                 <br>
                 <br>
 
-                <input class="accent-[#49437a]" type="checkbox" name="1700s" id="1700s" value="1700s" onchange={function(){this.checked==true?checkAll("1700s", true):checkAll("1700s",false)}}>
+                <input bind:checked={checkAll1700s} class="accent-[#49437a]" type="checkbox" name="1700s" id="1700s" value="1700s" onchange={function(){this.checked==true?checkAll("1700s", true):checkAll("1700s",false)}}>
                 <label for="1700s" class="arimo text-white text-[18px]">1700s</label>
                 <button class="text-[12px] box-border p-[5px] text-white" onclick={function(){display1700s=="display:none"?display1700s="display:block":display1700s="display:none"}}>expand/close</button>
                 <div class="bg-[#908EAC] w-[40%] rounded-[15px] box-border p-[15px]" style={display1700s}>
@@ -509,7 +515,7 @@
                 <br>
                 <br>
 
-                <input class="accent-[#49437a]" type="checkbox" name="1800s" value="1800s" id="1800s" onchange={function(){this.checked==true?checkAll("1800s", true):checkAll("1800s",false)}}>
+                <input bind:checked={checkAll1800s} class="accent-[#49437a]" type="checkbox" name="1800s" value="1800s" id="1800s" onchange={function(){this.checked==true?checkAll("1800s", true):checkAll("1800s",false)}}>
                 <label for="1800s" class="arimo text-white text-[18px]">1800s</label>
                 <button class="text-[12px] box-border p-[5px] text-white" onclick={function(){display1800s=="display:none"?display1800s="display:block":display1800s="display:none"}}>expand/close</button>
                 <div class="bg-[#908EAC] w-[40%] rounded-[15px] box-border p-[15px]" style={display1800s}>
@@ -546,7 +552,7 @@
                 <br>
                 <br>
 
-                <input class="accent-[#49437a]" type="checkbox" name="1900s" value="1900s" id="1900s" onchange={function(){this.checked==true?checkAll("1900s", true):checkAll("1900s",false)}}>
+                <input bind:checked={checkAll1900s} class="accent-[#49437a]" type="checkbox" name="1900s" value="1900s" id="1900s" onchange={function(){this.checked==true?checkAll("1900s", true):checkAll("1900s",false)}}>
                 <label for="1900s" class="arimo text-white text-[18px]">1900s</label>
                 <button class="text-[12px] box-border p-[5px] text-white" onclick={function(){display1900s=="display:none"?display1900s="display:block":display1900s="display:none"}}>expand/close</button>
                 <div class="bg-[#908EAC] w-[40%] rounded-[15px] box-border p-[15px]" style={display1900s}>
@@ -583,7 +589,7 @@
                 <br>
                 <br>
 
-                <input class="accent-[#49437a]" type="checkbox" name="2000-" id="2000-" value="2000-" onchange={function(){include("2000-", this.checked==undefined?false:this.checked)}}>
+                <input bind:checked={check2000s} class="accent-[#49437a]" type="checkbox" name="2000-" id="2000-" value="2000-" onchange={function(){include("2000-", this.checked==undefined?false:this.checked)}}>
                 <label for="2000-" class="arimo text-white text-[18px]">2000-</label>
                 <br>
             </div>
