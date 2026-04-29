@@ -435,8 +435,14 @@
     }
 
     function showSettings(){
-        settingsDiv="display:block";
+        /*settingsDiv="display:block";
         resultsDiv="display:none";
+        includedEvents=[];
+        includedPeriodsElements=[];
+        practicedTerms = [];
+        unusedTerms = [];
+        chosenEvent = "";*/
+        alert("hii so um this is broken rn </3 just reload the page i swear i'm working on it");
     }
 </script>
 
