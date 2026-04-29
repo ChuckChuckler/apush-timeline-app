@@ -433,6 +433,11 @@
         buttonShowMissing="display:block";
         buttonShowIncorrect="display:none";
     }
+
+    function showSettings(){
+        settingsDiv="display:block";
+        resultsDiv="display:none";
+    }
 </script>
 
 <div class="bg-[#3C3B4B] h-[100vh] overflow-auto box-border p-[15px]">
@@ -583,7 +588,7 @@
 
     <div class="w-[80%] h-[95vh] m-auto bg-[#767493] rounded-[20px] box-border p-[15px]" style={practiceDiv}> <!--events classification-->
         <h1 class="text-center kaisei-tokumin-bold text-white text-[20px]">{chosenEvent}</h1>
-        <button class="block m-auto" style={resultsBtn} onclick={showResults}>See results</button>
+        <button class=" block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" style={resultsBtn} onclick={showResults}>see results</button>
         <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[95%] box-border p-[10px]">
             {#each includedEvents as period,i}
                 <Period bind:this={includedPeriodsElements[i]} periodName={period} eventsAdded={[]} click={function(){classifyTerm(includedPeriodsElements[i])}} replaceEvent={practice}></Period>
@@ -591,12 +596,11 @@
         </div>
     </div>
 
-
-
-    <div class="w-[80%] h-[100vh] m-auto bg-red-300" style={resultsDiv}> <!--results-->
-        <button class="block m-auto" style={buttonShowMissing} onclick={seeCorrectPlacements}>see correct placements</button>
-        <button class="block m-auto" style={buttonShowIncorrect} onclick={hideCorrectPlacements}>see incorrect answers</button>
-        <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[90%] box-border p-[10px]">
+    <div class="w-[80%] h-[95vh] m-auto bg-[#767493] rounded-[20px] box-border p-[15px]" style={resultsDiv}> <!--results-->
+        <button class="block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" style={buttonShowMissing} onclick={seeCorrectPlacements}>see correct placements</button>
+        <button class="block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" style={buttonShowIncorrect} onclick={hideCorrectPlacements}>see incorrect answers</button>
+        <button class="mt-[5px] block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" onclick={showSettings}>return home</button>
+        <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[95%] box-border p-[10px]">
             {#each includedEvents as period,i}
                 <ResultPeriod bind:this={resultsPeriods[i]} periodName={period} correctEvents={[]} incorrectEvents={[]} allInPeriod={events[period]}></ResultPeriod>
             {/each}

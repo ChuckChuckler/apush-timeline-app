@@ -52,22 +52,34 @@
     }
 </script>
 
-<div class="bg-red-100 h-[20vw] overflow-auto" bind:this={container}>
-    <h1>{periodName}</h1>
-    <ul>
+<div class="scrollbar bg-[#535170] hover:bg-[#494763] rounded-[12.5px] box-border p-[10px] h-[20vw] overflow-auto" bind:this={container}>
+    <h1 class="istok-web-bold text-[white] text-center">{periodName}</h1>
+    <ul class="text-center">
         {#each corrects as e}
-            <li class="text-[#1FAB27]">{e}</li>
+            <li class="text-[#83e888] mb-[5px]">{e}</li>
         {/each}
         <div style={incorrectDisplay}>
             {#each incorrects as e}
-                <li class="text-red-500">{e}</li>
+                <li class="text-[#f58686] mb-[5px]">{e}</li>
             {/each}
         </div>
 
         <div style={correctMissingDisplay}>
             {#each notIncluded as e}
-                <li class="text-blue-500">{e}</li>
+                <li class="text-[#a8d2fa]">{e}</li>
             {/each}
         </div>
     </ul>
 </div>
+
+<style>
+    .istok-web-bold {
+        font-family: "Istok Web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .scrollbar{
+        scrollbar-width: thin;
+    }
+</style>
