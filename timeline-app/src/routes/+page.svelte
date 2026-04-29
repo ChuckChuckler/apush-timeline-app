@@ -69,7 +69,7 @@
             "Whiskey Rebellion",
             "Invention of cotton gin"
         ],
-        "1800-19":[
+        "1800-09":[
             "Jefferson elected",
             "Second Great Awakening begins",
             "Expansion of universal white male suffrage",
@@ -78,6 +78,8 @@
             "Louisiana Purchase",
             "Embargo Act",
             "Prohibition of international slave trade",
+        ],
+        "1810-19":[
             "First Bank of US falls",
             "Congress begins enacting American System programs",
             "Second Bank of US created"
@@ -270,6 +272,7 @@
         ]
     }
 
+    let learnDiv:string=$state("display:none");
     let practiceDiv:string=$state("display:none");
     let resultsDiv:string=$state("display:none");
     let settingsDiv:string=$state("display:block");
@@ -279,6 +282,11 @@
             includedEvents.push(period);
         }else{
             includedEvents.splice(includedEvents.indexOf(period),1);
+        }
+        includedEvents = sortArr(includedEvents);
+        if(includedEvents.includes("Pre-1600")){
+            includedEvents.splice(includedEvents.indexOf("Pre-1600"), 1);
+            includedEvents.unshift("Pre-1600");
         }
     }
 
@@ -290,7 +298,7 @@
     function checkAll(century:string, checked:boolean){
         let century1600:string[] = ["First half of 1600s", "Second half of 1600s"];
         let century1700:string[] = ["1700-60", "1760-69", "1770-79", "1780-89", "1790-99"];
-        let century1800:string[] = ["1800-19", "1820-29", "1830-39", "1840-49", "1850-59", "1860-69", "1870-79", "1880-89", "1890-99"];
+        let century1800:string[] = ["1800-09", "1810-19", "1820-29", "1830-39", "1840-49", "1850-59", "1860-69", "1870-79", "1880-89", "1890-99"];
         let century1900:string[] = ["1900-09", "1910-19", "1920-29", "1930-39", "1940-49", "1950-59", "1960-69", "1970-79", "1980-89", "1990-99"];
 
         let chosenCentury:string[] = [];
@@ -319,18 +327,18 @@
             }
         }
 
-        includedEvents = sort(includedEvents);
+        includedEvents = sortArr(includedEvents);
         if(includedEvents.includes("Pre-1600")){
             includedEvents.splice(includedEvents.indexOf("Pre-1600"), 1);
             includedEvents.unshift("Pre-1600");
         }
     }
 
-    function sort(arr:string[]){
+    function sortArr(arr:string[]){
         let arrSorted = arr.sort((a,b)=>{
             if(/^[0-9]/.test(a[0]) && !/^[0-9]/.test(b[0])) return 1;
             if(!/^[0-9]/.test(a[0]) && /^[0-9]/.test(b[0])) return -1;
-            return a[0].localeCompare(b[0],undefined,{ numeric: true});
+            return a.localeCompare(b,undefined,{ numeric: true});
         });
 
         return arrSorted;
@@ -340,16 +348,22 @@
     let unusedTerms:string[] = [];
     let chosenEvent:string = $state("");
 
-    function startPractice(){
-        practiceDiv="display:block";
-        settingsDiv="display:none";
-        for(let i of includedEvents){
-            for(let j of events[i]){
-                unusedTerms.push(j);
-            }
-        }
+    let type:any=$state();
 
-        practice("");
+    function startPractice(){
+        if(type!="learn"){
+            practiceDiv="display:block";
+            settingsDiv="display:none";
+            for(let i of includedEvents){
+                for(let j of events[i]){
+                    unusedTerms.push(j);
+                }
+            }
+
+            practice("");
+        }else{
+            alert("Pls do practice..this feature will be implemented soon..ok? ok");
+        }
     }
     
     let resultsBtn = $state("display:none");
@@ -398,6 +412,25 @@
         practiceDiv="display:none";
         resultsDiv="display:block";
     }
+
+    let buttonShowMissing:string=$state("display:block");
+    let buttonShowIncorrect:string=$state("display:none");
+
+    function seeCorrectPlacements(){
+        for(let i of resultsPeriods){
+            i.checkIncluded();
+        }
+        buttonShowIncorrect="display:block";
+        buttonShowMissing="display:none";
+    }
+
+    function hideCorrectPlacements(){
+        for(let i of resultsPeriods){
+            i.showIncorrect();
+        }
+        buttonShowMissing="display:block";
+        buttonShowIncorrect="display:none";
+    }
 </script>
 
 <h1 class="text-center">Really fun practice app (so much fun)</h1>
@@ -406,10 +439,10 @@
     <div>
         <h3 class="text-center">practice type</h3>
         <div class="w-[60%] m-auto">
-            <input type="radio" name="practice-type" value="learn" id="learn">
+            <input type="radio" name="practice-type" value="learn" id="learn" bind:group={type}>
             <label for="learn">learn</label>
             <br>
-            <input type="radio" name="practice-type" value="test" id="test">
+            <input type="radio" name="practice-type" value="test" id="test" bind:group={type} checked={true}>
             <label for="test">practice</label>
         </div>
     </div>
@@ -459,8 +492,11 @@
             <label for="1800s">1800s</label>
             <button onclick={function(){display1800s=="display:none"?display1800s="display:block":display1800s="display:none"}}>Expand/close</button>
             <div style={display1800s}>
-                <input type="checkbox" name="1800-19" id="1800-19" value="1800-19" checked={checkAll1800s} onchange={function(){include("1800-19", this.checked==undefined?false:this.checked)}}>
-                <label for="1800-19">1800-19</label>
+                <input type="checkbox" name="1800-09" id="1800-09" value="1800-09" checked={checkAll1800s} onchange={function(){include("1800-09", this.checked==undefined?false:this.checked)}}>
+                <label for="1800-09">1800-09</label>
+                <br>
+                <input type="checkbox" name="1810-19" id="1810-19" value="1810-19" checked={checkAll1800s} onchange={function(){include("1810-19", this.checked==undefined?false:this.checked)}}>
+                <label for="1800-09">1810-19</label>
                 <br>
                 <input type="checkbox" name="1820-29" id="1820-29" value="1820-29" checked={checkAll1800s} onchange={function(){include("1820-29", this.checked==undefined?false:this.checked)}}>
                 <label for="1820-29">1820-29</label>
@@ -545,12 +581,14 @@
     </div>
 </div>
 
+
+
 <div class="w-[80%] h-[100vh] m-auto bg-red-300" style={resultsDiv}> <!--results-->
-    <h1 class="text-center">{chosenEvent}</h1>
-    <button class="block m-auto" style={resultsBtn} onclick={showResults}>See results</button>
+    <button class="block m-auto" style={buttonShowMissing} onclick={seeCorrectPlacements}>see correct placements</button>
+    <button class="block m-auto" style={buttonShowIncorrect} onclick={hideCorrectPlacements}>see incorrect answers</button>
     <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[90%] box-border p-[10px]">
         {#each includedEvents as period,i}
-            <ResultPeriod bind:this={resultsPeriods[i]} periodName={period} correctEvents={[]} incorrectEvents={[]}></ResultPeriod>
+            <ResultPeriod bind:this={resultsPeriods[i]} periodName={period} correctEvents={[]} incorrectEvents={[]} allInPeriod={events[period]}></ResultPeriod>
         {/each}
     </div>
 </div>
