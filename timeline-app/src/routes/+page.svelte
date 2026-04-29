@@ -382,10 +382,12 @@
     }
 
     function classifyTerm(element:any){
-        practicedTerms.push(chosenEvent);
-        unusedTerms.indexOf(chosenEvent)==-1?unusedTerms.splice(unusedTerms.indexOf(chosenEvent),0):unusedTerms.splice(unusedTerms.indexOf(chosenEvent),1);
-        element.addEvent(chosenEvent);
-        practice("");
+        if(chosenEvent!=""){
+            practicedTerms.push(chosenEvent);
+            unusedTerms.indexOf(chosenEvent)==-1?unusedTerms.splice(unusedTerms.indexOf(chosenEvent),0):unusedTerms.splice(unusedTerms.indexOf(chosenEvent),1);
+            element.addEvent(chosenEvent);
+            practice("");
+        }
     }
 
     let resultsPeriods:any[]=$state([]);
