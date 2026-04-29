@@ -7,11 +7,12 @@
     let eventButtonBinds:HTMLButtonElement[] = $state([]);
 
     let container:any;
+    let ul:any;
 
     onMount(()=>{
         events=eventsAdded;
         container.addEventListener("click", (e:MouseEvent)=>{
-            if(e.target==container){
+            if(e.target==container || e.target==ul){
                 click();
             }
         });
@@ -32,14 +33,26 @@
     }
 </script>
 
-<div class="bg-red-100 h-[20vw] overflow-auto" bind:this={container}>
-    <h1>{periodName}</h1>
-    <ul>
+<div class="scrollbar bg-[#535170] hover:bg-[#494763] rounded-[12.5px] box-border p-[10px] h-[20vw] overflow-auto" bind:this={container}>
+    <h1 class="istok-web-bold text-[white] text-center">{periodName}</h1>
+    <ul class="text-center" bind:this={ul}>
         {#each events as e, i}
-            <button bind:this={eventButtonBinds[i]} style="z-index: 5;" class="bg-blue-300" onclick={function(){replace(e)}}>{e}</button>
+            <button bind:this={eventButtonBinds[i]} style="z-index: 5;" class="border-[1px] border-white rounded-[8px] mb-[5px] text-white p-[5px] hover:bg-[#3d3b54]" onclick={function(){replace(e)}}>{e}</button>
             <br>
         {/each}
     </ul>
     <br>
     <br>
 </div>
+
+<style>
+    .istok-web-bold {
+        font-family: "Istok Web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .scrollbar{
+        scrollbar-width: thin;
+    }
+</style>

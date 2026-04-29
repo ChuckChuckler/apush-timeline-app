@@ -434,10 +434,10 @@
 </script>
 
 <div class="bg-[#3C3B4B] h-[100vh] overflow-auto box-border p-[15px]">
-    <h1 class="text-center text-[#E4E4FF] istok-web-bold text text-[25px]">APUSH Timeline Practice App</h1>
-    <h3 class="text-center text-white kaisei-tokumin-regular">pre 1600s-2008</h3>
-    <br>
     <div class="m-auto" style={settingsDiv}> <!--settings-->
+        <h1 class="text-center text-[#E4E4FF] istok-web-bold text text-[25px]">APUSH Timeline Practice App</h1>
+        <h3 class="text-center text-white kaisei-tokumin-regular">pre 1600s-2008</h3>
+        <br>
         <div class="bg-[#616077] rounded-[20px] pt-[15px] pb-[20px] w-[50%] m-auto">
             <h3 class="text-center text-white kaisei-tokumin-regular">practice type</h3>
             <br>
@@ -579,10 +579,10 @@
         <br>
     </div>
 
-    <div class="w-[80%] h-[100vh] m-auto bg-red-300" style={practiceDiv}> <!--events classification-->
-        <h1 class="text-center">{chosenEvent}</h1>
+    <div class="w-[80%] h-[95vh] m-auto bg-[#767493] rounded-[20px] box-border p-[15px]" style={practiceDiv}> <!--events classification-->
+        <h1 class="text-center kaisei-tokumin-bold text-white text-[20px]">{chosenEvent}</h1>
         <button class="block m-auto" style={resultsBtn} onclick={showResults}>See results</button>
-        <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[90%] box-border p-[10px]">
+        <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[95%] box-border p-[10px]">
             {#each includedEvents as period,i}
                 <Period bind:this={includedPeriodsElements[i]} periodName={period} eventsAdded={[]} click={function(){classifyTerm(includedPeriodsElements[i])}} replaceEvent={practice}></Period>
             {/each}
@@ -613,6 +613,12 @@
     .kaisei-tokumin-regular {
         font-family: "Kaisei Tokumin", serif;
         font-weight: 400;
+        font-style: normal;
+    }
+
+    .kaisei-tokumin-bold {
+        font-family: "Kaisei Tokumin", serif;
+        font-weight: 800;
         font-style: normal;
     }
 
