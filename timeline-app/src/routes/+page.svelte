@@ -433,162 +433,200 @@
     }
 </script>
 
-<h1 class="text-center">Really fun practice app (so much fun)</h1>
-
-<div class="w-[50%] m-auto" style={settingsDiv}> <!--settings-->
-    <div>
-        <h3 class="text-center">practice type</h3>
-        <div class="w-[60%] m-auto">
-            <input type="radio" name="practice-type" value="learn" id="learn" bind:group={type}>
-            <label for="learn">learn</label>
-            <br>
-            <input type="radio" name="practice-type" value="test" id="test" bind:group={type} checked={true}>
-            <label for="test">practice</label>
-        </div>
-    </div>
-    <div> 
-        <h3 class="text-center">include events from:</h3>
-        <div>
-            <input type="checkbox" name="Pre-1600" id="Pre-1600" value="Pre-1600" onchange={function(){include("Pre-1600", this.checked==undefined?false:this.checked)}}>
-            <label for="Pre-1600">Pre-1600</label>
-            <br>
-            <br>
-            <input type="checkbox" name="1600s" value="1600s" id="1600s" onchange={function(){this.checked==true?checkAll("1600s", true):checkAll("1600s",false)}}>
-            <label for="1600s">1600s</label>
-            <button onclick={function(){display1600s=="display:none"?display1600s="display:block":display1600s="display:none"}}>Expand/close</button>
-            <div class="ml-50px" style={display1600s}>
-                <input checked={checkAll1600s} type="checkbox" name="First half of 1600s" id="First half of 1600s" value="First half of 1600s" onchange={function(){include("First half of 1600s", this.checked==undefined?false:this.checked)}}>
-                <label for="First half of 1600s">First half of 1600s</label>
-                <br>
-                <input checked={checkAll1600s} type="checkbox" name="Second half of 1600s" id="Second half of 1600s" value="Second half of 1600s" onchange={function(){include("Second half of 1600s", this.checked==undefined?false:this.checked)}}>
-                <label for="Second half of 1600s">Second half of 1600s</label>
-            </div>
-            <br>
-            <br>
-
-            <input type="checkbox" name="1700s" id="1700s" value="1700s" onchange={function(){this.checked==true?checkAll("1700s", true):checkAll("1700s",false)}}>
-            <label for="1700s">1700s</label>
-            <button onclick={function(){display1700s=="display:none"?display1700s="display:block":display1700s="display:none"}}>Expand/close</button>
-            <div class="ml-50px" style={display1700s}>
-                <input type="checkbox" name="1700-60" id="1700-60" value="1700-60" checked={checkAll1700s} onchange={function(){include("1700-60", this.checked==undefined?false:this.checked)}}>
-                <label for="1700-60">1700-60</label>
-                <br>
-                <input type="checkbox" name="1760-69" id="1760-69" value="1760-69" checked={checkAll1700s} onchange={function(){include("1760-69", this.checked==undefined?false:this.checked)}}>
-                <label for="1760-69">1760-69</label>
-                <br>
-                <input type="checkbox" name="1770-79" id="1770-79" value="1770-79" checked={checkAll1700s} onchange={function(){include("1770-79", this.checked==undefined?false:this.checked)}}>
-                <label for="1770-79">1770-79</label>
-                <br>
-                <input type="checkbox" name="1780-89" id="1780-89" value="1780-89" checked={checkAll1700s} onchange={function(){include("1780-89", this.checked==undefined?false:this.checked)}}>
-                <label for="1780-89">1780-89</label>
-                <br>
-                <input type="checkbox" name="1790-99" id="1790-99" value="1790-99" checked={checkAll1700s} onchange={function(){include("1790-99", this.checked==undefined?false:this.checked)}}>
-                <label for="1790-99">1790-99</label>
-            </div>
-            <br>
-            <br>
-
-            <input type="checkbox" name="1800s" value="1800s" id="1800s" onchange={function(){this.checked==true?checkAll("1800s", true):checkAll("1800s",false)}}>
-            <label for="1800s">1800s</label>
-            <button onclick={function(){display1800s=="display:none"?display1800s="display:block":display1800s="display:none"}}>Expand/close</button>
-            <div style={display1800s}>
-                <input type="checkbox" name="1800-09" id="1800-09" value="1800-09" checked={checkAll1800s} onchange={function(){include("1800-09", this.checked==undefined?false:this.checked)}}>
-                <label for="1800-09">1800-09</label>
-                <br>
-                <input type="checkbox" name="1810-19" id="1810-19" value="1810-19" checked={checkAll1800s} onchange={function(){include("1810-19", this.checked==undefined?false:this.checked)}}>
-                <label for="1800-09">1810-19</label>
-                <br>
-                <input type="checkbox" name="1820-29" id="1820-29" value="1820-29" checked={checkAll1800s} onchange={function(){include("1820-29", this.checked==undefined?false:this.checked)}}>
-                <label for="1820-29">1820-29</label>
-                <br>
-                <input type="checkbox" name="1830-39" id="1830-39" value="1830-39" checked={checkAll1800s} onchange={function(){include("1830-39", this.checked==undefined?false:this.checked)}}>
-                <label for="1830-39">1830-39</label>
-                <br>
-                <input type="checkbox" name="1840-49" id="1840-49" value="1840-49" checked={checkAll1800s} onchange={function(){include("1840-49", this.checked==undefined?false:this.checked)}}>
-                <label for="1840-49">1840-49</label>
-                <br>
-                <input type="checkbox" name="1850-59" id="1850-59" value="1850-59" checked={checkAll1800s} onchange={function(){include("1850-59", this.checked==undefined?false:this.checked)}}>
-                <label for="1850-59">1850-59</label>
-                <br>
-                <input type="checkbox" name="1860-69" id="1860-69" value="1860-69" checked={checkAll1800s} onchange={function(){include("1860-69", this.checked==undefined?false:this.checked)}}>
-                <label for="1860-69">1860-69</label>
-                <br>
-                <input type="checkbox" name="1870-79" id="1870-79" value="1870-79" checked={checkAll1800s} onchange={function(){include("1870-79", this.checked==undefined?false:this.checked)}}>
-                <label for="1870-79">1870-79</label>
-                <br>
-                <input type="checkbox" name="1880-89" id="1880-89" value="1880-89" checked={checkAll1800s} onchange={function(){include("1880-89", this.checked==undefined?false:this.checked)}}>
-                <label for="1880-89">1880-89</label>
-                <br>
-                <input type="checkbox" name="1890-99" id="1890-99" value="1890-99" checked={checkAll1800s} onchange={function(){include("1890-99", this.checked==undefined?false:this.checked)}}>
-                <label for="1890-99">1890-99</label>
-            </div>
-            <br>
-            <br>
-
-            <input type="checkbox" name="1900s" value="1900s" id="1900s" onchange={function(){this.checked==true?checkAll("1900s", true):checkAll("1900s",false)}}>
-            <label for="1900s">1900s</label>
-            <button onclick={function(){display1900s=="display:none"?display1900s="display:block":display1900s="display:none"}}>Expand/close</button>
-            <div style={display1900s}>
-                <input type="checkbox" name="1900-09" id="1900-09" value="1900-09" checked={checkAll1900s} onchange={function(){include("1900-09", this.checked==undefined?false:this.checked)}}>
-                <label for="1900-09">1900-09</label>
-                <br>
-                <input type="checkbox" name="1910-19" id="1910-19" value="1910-19" checked={checkAll1900s} onchange={function(){include("1910-19", this.checked==undefined?false:this.checked)}}>
-                <label for="1910-19">1910-19</label>
-                <br>
-                <input type="checkbox" name="1920-29" id="1920-29" value="1920-29" checked={checkAll1900s} onchange={function(){include("1920-29", this.checked==undefined?false:this.checked)}}>
-                <label for="1920-29">1920-29</label>
-                <br>
-                <input type="checkbox" name="1930-39" id="1930-39" value="1930-39" checked={checkAll1900s} onchange={function(){include("1930-39", this.checked==undefined?false:this.checked)}}>
-                <label for="1930-09">1930-39</label>
-                <br>
-                <input type="checkbox" name="1940-49" id="1940-49" value="1940-49" checked={checkAll1900s} onchange={function(){include("1940-49", this.checked==undefined?false:this.checked)}}>
-                <label for="1940-49">1940-49</label>
-                <br>
-                <input type="checkbox" name="1950-59" id="1950-59" value="1950-59" checked={checkAll1900s} onchange={function(){include("1950-59", this.checked==undefined?false:this.checked)}}>
-                <label for="1950-59">1950-59</label>
-                <br>
-                <input type="checkbox" name="1960-69" id="1960-69" value="1960-69" checked={checkAll1900s} onchange={function(){include("1960-69", this.checked==undefined?false:this.checked)}}>
-                <label for="1960-69">1960-69</label>
-                <br>
-                <input type="checkbox" name="1970-79" id="1970-79" value="1970-79" checked={checkAll1900s} onchange={function(){include("1970-79", this.checked==undefined?false:this.checked)}}>
-                <label for="1970-79">1970-79</label>
-                <br>
-                <input type="checkbox" name="1980-89" id="1980-89" value="1980-89" checked={checkAll1900s} onchange={function(){include("1980-89", this.checked==undefined?false:this.checked)}}>
-                <label for="1980-89">1980-89</label>
-                <br>
-                <input type="checkbox" name="1990-99" id="1990-99" value="1990-99" checked={checkAll1900s} onchange={function(){include("1990-99", this.checked==undefined?false:this.checked)}}>
-                <label for="1990-99">1900-09</label>
-            </div>
-            <br>
-            <br>
-
-            <input type="checkbox" name="2000-" id="2000-" value="2000-" onchange={function(){include("2000-", this.checked==undefined?false:this.checked)}}>
-            <label for="2000-">2000-</label>
-            <br>
-        </div>
-    </div>
+<div class="bg-[#3C3B4B] h-[100vh] overflow-auto box-border p-[15px]">
+    <h1 class="text-center text-[#E4E4FF] istok-web-bold text text-[25px]">APUSH Timeline Practice App</h1>
+    <h3 class="text-center text-white kaisei-tokumin-regular">pre 1600s-2008</h3>
     <br>
-    <button class="block m-auto bg-blue-100" onclick={startPractice}>Go!</button>
-</div>
+    <div class="m-auto" style={settingsDiv}> <!--settings-->
+        <div class="bg-[#616077] rounded-[20px] pt-[15px] pb-[20px] w-[50%] m-auto">
+            <h3 class="text-center text-white kaisei-tokumin-regular">practice type</h3>
+            <br>
+            <div class="w-[60%] m-auto flex justify-around">
+                <div>
+                    <input class="accent-[#49437a]" type="radio" name="practice-type" value="learn" id="learn" bind:group={type}>
+                    <label for="learn" class="text-[#E7E7FB] text-[15px] kaisei-tokumin-regular">learn</label>
+                </div>
+                <div>
+                    <input class="accent-[#49437a]" type="radio" name="practice-type" value="test" id="test" bind:group={type} checked={true}>
+                    <label for="test" class="text-[#E7E7FB] text-[15px] kaisei-tokumin-regular">practice</label>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="bg-[#767493] rounded-[20px] w-[70%] h-[58vh] m-auto overflow-auto box-border p-[15px]"> 
+            <h3 class="text-center text-white kaisei-tokumin-regular">include events from:</h3>
+            <div>
+                <input class="accent-[#49437a]" type="checkbox" name="Pre-1600" id="Pre-1600" value="Pre-1600" onchange={function(){include("Pre-1600", this.checked==undefined?false:this.checked)}}>
+                <label for="Pre-1600" class="arimo text-white text-[18px]">Pre-1600</label>
+                <br>
+                <br>
 
-<div class="w-[80%] h-[100vh] m-auto bg-red-300" style={practiceDiv}> <!--events classification-->
-    <h1 class="text-center">{chosenEvent}</h1>
-    <button class="block m-auto" style={resultsBtn} onclick={showResults}>See results</button>
-    <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[90%] box-border p-[10px]">
-        {#each includedEvents as period,i}
-            <Period bind:this={includedPeriodsElements[i]} periodName={period} eventsAdded={[]} click={function(){classifyTerm(includedPeriodsElements[i])}} replaceEvent={practice}></Period>
-        {/each}
+                <input class="accent-[#49437a]" type="checkbox" name="1600s" value="1600s" id="1600s" onchange={function(){this.checked==true?checkAll("1600s", true):checkAll("1600s",false)}}>
+                <label for="1600s" class="arimo text-white text-[18px]">1600s</label>
+                <button class="text-[12px] box-border p-[5px] text-white" onclick={function(){display1600s=="display:none"?display1600s="display:block":display1600s="display:none"}}>expand/close</button>
+                <div class="bg-[#908EAC] w-[40%] rounded-[15px] box-border p-[15px]" style={display1600s}>
+                    <input class="accent-[#49437a]" checked={checkAll1600s} type="checkbox" name="First half of 1600s" id="First half of 1600s" value="First half of 1600s" onchange={function(){include("First half of 1600s", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="First half of 1600s">First half of 1600s</label>
+                    <br>
+                    <input class="accent-[#49437a]" checked={checkAll1600s} type="checkbox" name="Second half of 1600s" id="Second half of 1600s" value="Second half of 1600s" onchange={function(){include("Second half of 1600s", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="Second half of 1600s">Second half of 1600s</label>
+                </div>
+                <br>
+                <br>
+
+                <input class="accent-[#49437a]" type="checkbox" name="1700s" id="1700s" value="1700s" onchange={function(){this.checked==true?checkAll("1700s", true):checkAll("1700s",false)}}>
+                <label for="1700s" class="arimo text-white text-[18px]">1700s</label>
+                <button class="text-[12px] box-border p-[5px] text-white" onclick={function(){display1700s=="display:none"?display1700s="display:block":display1700s="display:none"}}>expand/close</button>
+                <div class="bg-[#908EAC] w-[40%] rounded-[15px] box-border p-[15px]" style={display1700s}>
+                    <input class="accent-[#49437a]" type="checkbox" name="1700-60" id="1700-60" value="1700-60" checked={checkAll1700s} onchange={function(){include("1700-60", this.checked==undefined?false:this.checked)}}>
+                    <label for="1700-60" class="arimo-thin text-white text-[16px]">1700-60</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1760-69" id="1760-69" value="1760-69" checked={checkAll1700s} onchange={function(){include("1760-69", this.checked==undefined?false:this.checked)}}>
+                    <label for="1760-69" class="arimo-thin text-white text-[16px]">1760-69</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1770-79" id="1770-79" value="1770-79" checked={checkAll1700s} onchange={function(){include("1770-79", this.checked==undefined?false:this.checked)}}>
+                    <label for="1770-79" class="arimo-thin text-white text-[16px]">1770-79</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1780-89" id="1780-89" value="1780-89" checked={checkAll1700s} onchange={function(){include("1780-89", this.checked==undefined?false:this.checked)}}>
+                    <label for="1780-89" class="arimo-thin text-white text-[16px]">1780-89</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1790-99" id="1790-99" value="1790-99" checked={checkAll1700s} onchange={function(){include("1790-99", this.checked==undefined?false:this.checked)}}>
+                    <label for="1790-99" class="arimo-thin text-white text-[16px]">1790-99</label>
+                </div>
+                <br>
+                <br>
+
+                <input class="accent-[#49437a]" type="checkbox" name="1800s" value="1800s" id="1800s" onchange={function(){this.checked==true?checkAll("1800s", true):checkAll("1800s",false)}}>
+                <label for="1800s" class="arimo text-white text-[18px]">1800s</label>
+                <button class="text-[12px] box-border p-[5px] text-white" onclick={function(){display1800s=="display:none"?display1800s="display:block":display1800s="display:none"}}>expand/close</button>
+                <div class="bg-[#908EAC] w-[40%] rounded-[15px] box-border p-[15px]" style={display1800s}>
+                    <input class="accent-[#49437a]" type="checkbox" name="1800-09" id="1800-09" value="1800-09" checked={checkAll1800s} onchange={function(){include("1800-09", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1800-09">1800-09</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1810-19" id="1810-19" value="1810-19" checked={checkAll1800s} onchange={function(){include("1810-19", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1800-09">1810-19</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1820-29" id="1820-29" value="1820-29" checked={checkAll1800s} onchange={function(){include("1820-29", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1820-29">1820-29</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1830-39" id="1830-39" value="1830-39" checked={checkAll1800s} onchange={function(){include("1830-39", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1830-39">1830-39</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1840-49" id="1840-49" value="1840-49" checked={checkAll1800s} onchange={function(){include("1840-49", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1840-49">1840-49</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1850-59" id="1850-59" value="1850-59" checked={checkAll1800s} onchange={function(){include("1850-59", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1850-59">1850-59</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1860-69" id="1860-69" value="1860-69" checked={checkAll1800s} onchange={function(){include("1860-69", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1860-69">1860-69</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1870-79" id="1870-79" value="1870-79" checked={checkAll1800s} onchange={function(){include("1870-79", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1870-79">1870-79</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1880-89" id="1880-89" value="1880-89" checked={checkAll1800s} onchange={function(){include("1880-89", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1880-89">1880-89</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1890-99" id="1890-99" value="1890-99" checked={checkAll1800s} onchange={function(){include("1890-99", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1890-99">1890-99</label>
+                </div>
+                <br>
+                <br>
+
+                <input class="accent-[#49437a]" type="checkbox" name="1900s" value="1900s" id="1900s" onchange={function(){this.checked==true?checkAll("1900s", true):checkAll("1900s",false)}}>
+                <label for="1900s" class="arimo text-white text-[18px]">1900s</label>
+                <button class="text-[12px] box-border p-[5px] text-white" onclick={function(){display1900s=="display:none"?display1900s="display:block":display1900s="display:none"}}>expand/close</button>
+                <div class="bg-[#908EAC] w-[40%] rounded-[15px] box-border p-[15px]" style={display1900s}>
+                    <input class="accent-[#49437a]" type="checkbox" name="1900-09" id="1900-09" value="1900-09" checked={checkAll1900s} onchange={function(){include("1900-09", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1900-09">1900-09</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1910-19" id="1910-19" value="1910-19" checked={checkAll1900s} onchange={function(){include("1910-19", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1910-19">1910-19</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1920-29" id="1920-29" value="1920-29" checked={checkAll1900s} onchange={function(){include("1920-29", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1920-29">1920-29</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1930-39" id="1930-39" value="1930-39" checked={checkAll1900s} onchange={function(){include("1930-39", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1930-09">1930-39</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1940-49" id="1940-49" value="1940-49" checked={checkAll1900s} onchange={function(){include("1940-49", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1940-49">1940-49</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1950-59" id="1950-59" value="1950-59" checked={checkAll1900s} onchange={function(){include("1950-59", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1950-59">1950-59</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1960-69" id="1960-69" value="1960-69" checked={checkAll1900s} onchange={function(){include("1960-69", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1960-69">1960-69</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1970-79" id="1970-79" value="1970-79" checked={checkAll1900s} onchange={function(){include("1970-79", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1970-79">1970-79</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1980-89" id="1980-89" value="1980-89" checked={checkAll1900s} onchange={function(){include("1980-89", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1980-89">1980-89</label>
+                    <br>
+                    <input class="accent-[#49437a]" type="checkbox" name="1990-99" id="1990-99" value="1990-99" checked={checkAll1900s} onchange={function(){include("1990-99", this.checked==undefined?false:this.checked)}}>
+                    <label class="arimo-thin text-white text-[16px]" for="1990-99">1900-09</label>
+                </div>
+                <br>
+                <br>
+
+                <input class="accent-[#49437a]" type="checkbox" name="2000-" id="2000-" value="2000-" onchange={function(){include("2000-", this.checked==undefined?false:this.checked)}}>
+                <label for="2000-" class="arimo text-white text-[18px]">2000-</label>
+                <br>
+            </div>
+            <button class="block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" onclick={startPractice}>Go!</button>
+        </div>
+        <br>
     </div>
-</div>
 
-
-
-<div class="w-[80%] h-[100vh] m-auto bg-red-300" style={resultsDiv}> <!--results-->
-    <button class="block m-auto" style={buttonShowMissing} onclick={seeCorrectPlacements}>see correct placements</button>
-    <button class="block m-auto" style={buttonShowIncorrect} onclick={hideCorrectPlacements}>see incorrect answers</button>
-    <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[90%] box-border p-[10px]">
-        {#each includedEvents as period,i}
-            <ResultPeriod bind:this={resultsPeriods[i]} periodName={period} correctEvents={[]} incorrectEvents={[]} allInPeriod={events[period]}></ResultPeriod>
-        {/each}
+    <div class="w-[80%] h-[100vh] m-auto bg-red-300" style={practiceDiv}> <!--events classification-->
+        <h1 class="text-center">{chosenEvent}</h1>
+        <button class="block m-auto" style={resultsBtn} onclick={showResults}>See results</button>
+        <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[90%] box-border p-[10px]">
+            {#each includedEvents as period,i}
+                <Period bind:this={includedPeriodsElements[i]} periodName={period} eventsAdded={[]} click={function(){classifyTerm(includedPeriodsElements[i])}} replaceEvent={practice}></Period>
+            {/each}
+        </div>
     </div>
+
+
+
+    <div class="w-[80%] h-[100vh] m-auto bg-red-300" style={resultsDiv}> <!--results-->
+        <button class="block m-auto" style={buttonShowMissing} onclick={seeCorrectPlacements}>see correct placements</button>
+        <button class="block m-auto" style={buttonShowIncorrect} onclick={hideCorrectPlacements}>see incorrect answers</button>
+        <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[90%] box-border p-[10px]">
+            {#each includedEvents as period,i}
+                <ResultPeriod bind:this={resultsPeriods[i]} periodName={period} correctEvents={[]} incorrectEvents={[]} allInPeriod={events[period]}></ResultPeriod>
+            {/each}
+        </div>
+    </div>
+
 </div>
+
+<style>
+    .istok-web-bold {
+        font-family: "Istok Web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .kaisei-tokumin-regular {
+        font-family: "Kaisei Tokumin", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .arimo{
+        font-family: "Arimo", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    .arimo-thin{
+        font-family: "Arimo", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+</style>
