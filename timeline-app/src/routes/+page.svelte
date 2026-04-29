@@ -599,17 +599,17 @@
         <br>
     </div>
 
-    <div class="w-[80%] h-[95vh] m-auto bg-[#767493] rounded-[20px] box-border p-[15px]" style={practiceDiv}> <!--events classification-->
+    <div class="w-[80%] h-[95vh] m-auto bg-[#767493] rounded-[20px] box-border p-[15px] overflow-auto" style={practiceDiv}> <!--events classification-->
         <h1 class="text-center kaisei-tokumin-bold text-white text-[20px]">{chosenEvent}</h1>
         <button class=" block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" style={resultsBtn} onclick={showResults}>see results</button>
-        <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[95%] box-border p-[10px]">
+        <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[95%] box-border p-[10px] overflow-auto">
             {#each includedEvents as period,i}
                 <Period bind:this={includedPeriodsElements[i]} clickable={clickable} periodName={period} eventsAdded={[]} click={function(){classifyTerm(includedPeriodsElements[i])}} replaceEvent={practice}></Period>
             {/each}
         </div>
     </div>
 
-    <div class="w-[80%] h-[95vh] m-auto bg-[#767493] rounded-[20px] box-border p-[15px]" style={resultsDiv}> <!--results-->
+    <div class="w-[80%] h-[95vh] m-auto bg-[#767493] rounded-[20px] box-border p-[15px] overflow-auto" style={resultsDiv}> <!--results-->
         <button class="block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" style={buttonShowMissing} onclick={seeCorrectPlacements}>see correct placements</button>
         <button class="block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" style={buttonShowIncorrect} onclick={hideCorrectPlacements}>see incorrect answers</button>
         <button class="mt-[5px] block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" onclick={showSettings}>return home</button>
@@ -620,7 +620,7 @@
         </div>
     </div>
 
-    <p class="arimo-thin text-white text-center">v1.0.3</p>
+    <p class="arimo-thin text-white text-center">v1.0.4</p>
     <p class="arimo-thin text-white text-center"><a class="underline" target="_blank" href="https://github.com/ChuckChuckler/apush-timeline-app">github</a>- open source, please fork!! open issue if any bugs are found</p>
 
 </div>
