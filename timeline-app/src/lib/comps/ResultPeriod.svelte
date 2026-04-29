@@ -52,7 +52,7 @@
     }
 </script>
 
-<div class="scrollbar bg-[#535170] hover:bg-[#494763] rounded-[12.5px] box-border p-[10px] h-[20vw] overflow-auto" bind:this={container}>
+<div class="scrollbar bg-[#535170] hover:bg-[#494763] rounded-[12.5px] box-border p-[10px] h-[20vw] overflow-auto overflow-auto" bind:this={container}>
     <h1 class="istok-web-bold text-[white] text-center">{periodName}</h1>
     <ul class="text-center">
         {#each corrects as e}
