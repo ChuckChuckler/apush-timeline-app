@@ -33,6 +33,12 @@
         return incorrects;
     }
 
+    export function resetEvents(){
+        corrects=[];
+        incorrects=[];
+        notIncluded=[];
+    }
+
     export function checkIncluded(){
         if(notIncluded.length==0){
             for(let i of allInPeriod){

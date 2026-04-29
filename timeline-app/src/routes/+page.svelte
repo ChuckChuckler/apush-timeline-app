@@ -352,6 +352,8 @@
 
     let type:any=$state();
 
+    let clickable=$state(true);
+
     function startPractice(){
         if(type!="learn"){
             practiceDiv="display:block";
@@ -378,6 +380,7 @@
 
         if(customTerm!==""){
             chosenEvent=customTerm;
+            clickable=false;
         }else{
             unusedTerms.length==0?chosenEvent="":chosenEvent=unusedTerms[Math.floor(Math.random()*unusedTerms.length)];
         }
@@ -388,6 +391,7 @@
             practicedTerms.push(chosenEvent);
             unusedTerms.indexOf(chosenEvent)==-1?unusedTerms.splice(unusedTerms.indexOf(chosenEvent),0):unusedTerms.splice(unusedTerms.indexOf(chosenEvent),1);
             element.addEvent(chosenEvent);
+            clickable=true;
             practice("");
         }
     }
@@ -439,16 +443,13 @@
     function showSettings(){
         settingsDiv="display:block";
         resultsDiv="display:none";
-        includedEvents=[];
-        includedPeriodsElements=[];
+        for(let i in includedEvents){
+            includedPeriodsElements[i].resetEvents();
+            resultsPeriods[i].resetEvents();
+        }
         practicedTerms = [];
         unusedTerms = [];
         chosenEvent = "";
-        checkAll1600s=false;
-        checkAll1700s=false;
-        checkAll1800s=false;
-        checkAll1900s=false;
-        //alert("hii so um this is broken rn </3 just reload the page i swear i'm working on it");
     }
 </script>
 
@@ -603,7 +604,7 @@
         <button class=" block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" style={resultsBtn} onclick={showResults}>see results</button>
         <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[95%] box-border p-[10px]">
             {#each includedEvents as period,i}
-                <Period bind:this={includedPeriodsElements[i]} periodName={period} eventsAdded={[]} click={function(){classifyTerm(includedPeriodsElements[i])}} replaceEvent={practice}></Period>
+                <Period bind:this={includedPeriodsElements[i]} clickable={clickable} periodName={period} eventsAdded={[]} click={function(){classifyTerm(includedPeriodsElements[i])}} replaceEvent={practice}></Period>
             {/each}
         </div>
     </div>

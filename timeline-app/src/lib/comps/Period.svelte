@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
 
-    let { periodName, eventsAdded, click, replaceEvent } = $props();
+    let { periodName, eventsAdded, click, replaceEvent, clickable } = $props();
 
     let events:string[] = $state([]);
     let eventButtonBinds:HTMLButtonElement[] = $state([]);
@@ -26,10 +26,16 @@
         return events;
     }
 
-    function replace(e:string){
-        eventButtonBinds.splice(events.indexOf(e),1);
-        events.splice(events.indexOf(e),1);
-        replaceEvent(e);
+    export function resetEvents(){
+        events=[];
+    }
+
+    function replace(e:string,isReplacable:boolean){
+        if(isReplacable){
+            eventButtonBinds.splice(events.indexOf(e),1);
+            events.splice(events.indexOf(e),1);
+            replaceEvent(e);
+        }
     }
 </script>
 
@@ -37,7 +43,7 @@
     <h1 class="istok-web-bold text-[white] text-center">{periodName}</h1>
     <ul class="text-center" bind:this={ul}>
         {#each events as e, i}
-            <button bind:this={eventButtonBinds[i]} style="z-index: 5;" class="border-[1px] border-white rounded-[8px] mb-[5px] text-white p-[5px] hover:bg-[#3d3b54]" onclick={function(){replace(e)}}>{e}</button>
+            <button bind:this={eventButtonBinds[i]} style="z-index: 5;" class="border-[1px] border-white rounded-[8px] mb-[5px] text-white p-[5px] hover:bg-[#3d3b54]" onclick={function(){replace(e,clickable)}}>{e}</button>
             <br>
         {/each}
     </ul>
