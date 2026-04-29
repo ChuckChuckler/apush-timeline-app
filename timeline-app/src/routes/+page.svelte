@@ -621,7 +621,7 @@
     </div>
 
     <p class="arimo-thin text-white text-center">v1.0.3</p>
-    <p class="arimo-thin text-white underline text-center"><a target="_blank" href="https://github.com/ChuckChuckler/apush-timeline-app">github</a></p>
+    <p class="arimo-thin text-white text-center"><a class="underline" target="_blank" href="https://github.com/ChuckChuckler/apush-timeline-app">github</a>- open source, please fork!! open issue if any bugs are found</p>
 
 </div>
 
