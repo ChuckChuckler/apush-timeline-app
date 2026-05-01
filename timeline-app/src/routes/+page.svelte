@@ -258,7 +258,8 @@
             "Iran hostage crisis"
         ],
         "1980-89":[
-            "Reagen elected",
+            "Reagan elected",
+            "Reaganomics",
             "AIDS epidemic"
         ],
         "1990-99":[
@@ -270,8 +271,53 @@
             "beginning of War on Terror",
             "2008 Financial Crisis"
         ]
+    };
+
+    type eventInfo={
+        reasonForDecade:string,
+        desc:string
+    };
+
+    let eventsInformation:Record<string,eventInfo>={
+        "British settlement of Jamestown":{
+            reasonForDecade:"It helps to memorize the years of some events. Jamestown was founded in 1607 (or very early 1600s). You can use this to create a general timeline of the events that follow.\nJamestown was the first British colony in America.",
+            desc:"A.k.a the settlement of the first American colony."
+        },
+        "House of Burgesses":{
+            reasonForDecade:"The colonists were beginning to get settled in the early 1600s. So the early 1600s will be dominated by the thirteen original colonies forming and and organizing themselves (e.g. creating governments)",
+            desc:"Virginia's house of government and America's first legislative house."
+        },
+        "Arrival of first enslaved Africans in Virginia":{
+            reasonForDecade:"This happened in the same year as the House of Burgesses!",
+            desc:""
+        },
+        "Mayflower Compact":{
+            reasonForDecade:"The colonists were beginning to get settled in the early 1600s. So the early 1600s will be dominated by the thirteen original colonies forming and and organizing themselves (e.g. creating governments)",
+            desc:"This document established government in the Plymouth Colony. It was the first written framework of government in America."
+        },
+        "Massachusetts Bay Colony":{
+            reasonForDecade:"The colonists were beginning to get settled in the early 1600s. So the early 1600s will be dominated by the thirteen original colonies forming and and organizing themselves (e.g. creating governments)",
+            desc:"A colony established in Massachusetts"
+        },
+        "First Navigation Acts":{
+            reasonForDecade:"",
+            desc:"The first laws passed by Britain regulating trade, shipping, and commerce in America. The enforcement of these laws was lax (salutary neglect)."
+        },
+        "Metacom's War":{
+            reasonForDecade:"There were a few rebellions happening in the late 1600s, including the Pueblo Revolt, Metacom's War and Bacon's Rebellion.",
+            desc:"A conflict between a coalition of Native Americans and New England colonists + their Native American allies. It was the last (?????? idk continue this once we have more info)"
+        },
+        "Bacon's Rebellion":{
+            reasonForDecade:"There were a few rebellions happening in the late 1600s, including the Pueblo Revolt, Metacom's War and Bacon's Rebellion.",
+            desc:"A rebellion of oppressed/dissatisfied colonists against government officials, led by Nathanial Bacon. It resulted when William Berkeley-- governor of Virginia-- disallowed colonists from expanding into Native American land for tobacco planting."
+        },
+        "Pueblo Revolt":{
+            reasonForDecade:"There were a few rebellions happening in the late 1600s, including the Pueblo Revolt, Metacom's War and Bacon's Rebellion.",
+            desc:"A successful revolt by the Pueblo peoples against Spanish rule. The Pueblo peoples maintained sovereignty for 12 years following this."
+        }
     }
 
+    let eventsReasonDefinition
     let learnDiv:string=$state("display:none");
     let practiceDiv:string=$state("display:none");
     let resultsDiv:string=$state("display:none");
@@ -464,7 +510,7 @@
             <br>
             <div class="w-[60%] m-auto flex justify-around">
                 <div>
-                    <input class="accent-[#49437a]" type="radio" name="practice-type" value="learn" id="learn" bind:group={type}>
+                    <input class="accent-[#49437a]" type="radio" name="practice-type" value="learn" id="learn" bind:group={type} onchange={function(){alert("learn is under construction rn :p pls hold")}}>
                     <label for="learn" class="text-[#E7E7FB] text-[15px] kaisei-tokumin-regular">learn</label>
                 </div>
                 <div>
