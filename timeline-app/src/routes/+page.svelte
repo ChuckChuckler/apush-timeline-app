@@ -49,7 +49,7 @@
             "First Continental Congress",
             "Thomas Paine's \"Common Sense\"",
             "Lexington and Concord",
-            "American Revolution",
+            "Revolutionary War",
             "Declaration of Independence",
             "Second Continental Congress",
             "Olive Branch Petition",
@@ -287,7 +287,7 @@
             reasonForDecade:"The colonists were beginning to get settled in the early 1600s. So the early 1600s will be dominated by the thirteen original colonies forming and and organizing themselves (e.g. creating governments)",
             desc:"Virginia's house of government and America's first legislative house."
         },
-        "Arrival of first enslaved Africans in Virginia":{
+        "arrival of first enslaved Africans in Virginia":{
             reasonForDecade:"This happened in the same year as the House of Burgesses!",
             desc:""
         },
@@ -299,21 +299,93 @@
             reasonForDecade:"The colonists were beginning to get settled in the early 1600s. So the early 1600s will be dominated by the thirteen original colonies forming and and organizing themselves (e.g. creating governments)",
             desc:"A colony established in Massachusetts"
         },
-        "First Navigation Acts":{
+        "first Navigation Acts":{
             reasonForDecade:"",
             desc:"The first laws passed by Britain regulating trade, shipping, and commerce in America. The enforcement of these laws was lax (salutary neglect)."
         },
         "Metacom's War":{
-            reasonForDecade:"There were a few rebellions happening in the late 1600s, including the Pueblo Revolt, Metacom's War and Bacon's Rebellion.",
+            reasonForDecade:"It can help to group together Metacom's War, Bacon's Rebellion, and the Pueblo Revolt, as all three were rebellions involving Native American people prior to the Revolutionary War/creation of the United States.",
             desc:"A conflict between a coalition of Native Americans and New England colonists + their Native American allies. It was the last (?????? idk continue this once we have more info)"
         },
         "Bacon's Rebellion":{
-            reasonForDecade:"There were a few rebellions happening in the late 1600s, including the Pueblo Revolt, Metacom's War and Bacon's Rebellion.",
+            reasonForDecade:"It can help to group together Metacom's War, Bacon's Rebellion, and the Pueblo Revolt, as all three were rebellions involving Native American people prior to the Revolutionary War/creation of the United States.",
             desc:"A rebellion of oppressed/dissatisfied colonists against government officials, led by Nathanial Bacon. It resulted when William Berkeley-- governor of Virginia-- disallowed colonists from expanding into Native American land for tobacco planting."
         },
         "Pueblo Revolt":{
-            reasonForDecade:"There were a few rebellions happening in the late 1600s, including the Pueblo Revolt, Metacom's War and Bacon's Rebellion.",
+            reasonForDecade:"It can help to group together Metacom's War, Bacon's Rebellion, and the Pueblo Revolt, as all three were rebellions involving Native American people prior to the Revolutionary War/creation of the United States.",
             desc:"A successful revolt by the Pueblo peoples against Spanish rule. The Pueblo peoples maintained sovereignty for 12 years following this."
+        },
+        "First Great Awakening":{
+            reasonForDecade:"",
+            desc:"A key religious movement in the 1730s-40s emphasizing human sin and urging atonement. Introduced emotionalism into religious practice. Key figures include George Whitefield and Rev. Jonathan Edwards, the latter delivering the famous sermon \"Sinners in the Hands of Angry God\".",
+        },
+        "7 Years' War":{
+            reasonForDecade:"The 7 Years' War is what led Britain to tighten its hold on the colonies. After the end of the conflict is when legislation like the Sugar and Stamp Acts were passed as Britain tried to manage war debt and new territories.",
+            desc:"A conflict between France and Britain and their allies that was described by Winston Churchill as \"the first world war\". A continuation of France and Britain's struggle over territories, it was sparked by a debate over claim to the upper Ohio River valley. Following this event, Britain increased control over the colonies substantially."
+        },
+        "Salutary Neglect ends":{
+            reasonForDecade:"This event is in the decade following the 7 Years' War. The 7 Years' War is what led to Britain tightening its control on the colonies. A good way to look at it is the 7 Years War --> Britain becoming more strict, colonists dissatisfied but not openly retaliating --> Britain going further, colonists begin to retaliate and clamor for independence = 1700-60 --> 1760-69 --> 1770-79.",
+            desc:"Britain ends their practice of being lenient on their enforcement of laws. This upset colonists, as the sudden enforcement was unexpected and overly harsh."
+        },
+        "Proclamation Line of 1763":{
+            reasonForDecade:"my guy it's literally in the name",
+            desc:"Colonists wanted to move to new westward territory gained after the 7 Years' War. However, doing so would interfere with the indigenous tribes already living there. To avoid conflict, British Parliament passed the act creating this-- a boundary beyond which colonists were not allowed to settle. This angered colonists, and most did not comply, increasing tension between Britain and the American colonies."
+        },
+        "Sugar Act":{
+            reasonForDecade:"This event is in the decade following the 7 Years' War. The 7 Years' War is what led to Britain tightening its control on the colonies. A good way to look at it is the 7 Years War --> Britain becoming more strict, colonists dissatisfied but not openly retaliating or considering independence --> Britain going further, colonists begin to retaliate and clamor for independence = 1700-60 --> 1760-69 --> 1770-79.",
+            desc:"This act reduced the tax on molasses, but imposed taxes on other goods. It was an attempt to stop smuggling, severely penalizing offenders and trying them in British-run courts. It can be linked to the end of salutary neglect. This upset colonists."
+        },
+        "Stamp Act":{
+            reasonForDecade:"This event is in the decade following the 7 Years' War. The 7 Years' War is what led to Britain tightening its control on the colonies. A good way to look at it is the 7 Years War --> Britain becoming more strict, colonists dissatisfied but not openly retaliating or considering independence --> Britain going further, colonists begin to retaliate and clamor for independence = 1700-60 --> 1760-69 --> 1770-79.",
+            desc:"This act placed a tax on printed goods, including various papers, legal documents, magazines, newspapers, and playing cards. Colonists were angered by this, namely that the unfair tax was imposed on them without them being given representation in Parliament (taxation without representation)."
+        },
+        "Townshend Acts":{
+            reasonForDecade:"This event is in the decade following the 7 Years' War. The 7 Years' War is what led to Britain tightening its control on the colonies. A good way to look at it is the 7 Years War --> Britain becoming more strict, colonists dissatisfied but not openly retaliating or considering independence --> Britain going further, colonists begin to retaliate and clamor for independence = 1700-60 --> 1760-69 --> 1770-79.",
+            desc:"Four acts passed by British Parliament. The main purpose of these acts was to assert supreme authority over the colonies. They imposed duties on goods like paper, paint, and glass, and made attempts to curb smuggling and enforce new tax policies, among other things. These increased tension between the colonists and the British."
+        },
+        "Boston Massacre":{
+            reasonForDecade:"The 1770s were the peak of colonial resistance. This is the decade when colonists were fully tired of the British and began seeing independence as an option. The Boston Massacre could be seen as the catalyst that set the path to the Revolutionary War in motion-- and it was the first major event that started off the 1770s.",
+            desc:"Britain sent soldiers to Boston to enforce the Townshend Acts. After a verbal altercation between the soldiers and the colonists, the colonists began attacking the British soldiers with snowballs and stones. Eventually, one of the soldiers fired into the crowd, causing the rest of the soldiers to also begin firing without orders. Three people were instantly killed, and eight were wounded."
+        },
+        "Tea Act":{
+            reasonForDecade:"The 1770s were the peak of colonial resistance. This is the decade when colonists were fully tired of the British and began seeing independence as an option. The Tea Act was passed before and led to the Boston Tea Party.",
+            desc:"This act created a monopoly on tea dominated by the British East India Company. More importantly, although it lowered the price of tea, it maintained the taxes enforced by the Townshend Acts, implying the acceptance of \"taxation without representation\" should the colonists purchase. Many colonists understood and resented this implication."
+        },
+        "Boston Tea Party":{
+            reasonForDecade:"The 1770s were the peak of colonial resistance. This is the decade when colonists were thoroughly frustrated with the British and began seeing independence as an option. The Boston Tea Party followed the Tea Act-- a tax on tea-- and was fueled with the resentment still simmering from the Boston Massacre. The Intolerable Acts were later passed as a response to the Boston Tea Party.",
+            desc:"Angered by the Tea Act, a group of Bostonians disguised as Mohawk Indians crept aboard a British merchant ship and dumped thousands of pounds of tea into the harbor. This was illustrated as an act of patriotism by Bostonians and other colonists, and an unforgivable crime by the British."
+        },
+        "Intolerable Acts":{
+            reasonForDecade:"The 1770s were the peak of colonial resistance. This is the decade when colonists were thoroughly frustrated with the British and began seeing independence as an option. The Intolerable Acts were passed in response to the Boston Tea Party, both to punish Massachusetts and to assert dominance over the colonies. The First Continental Congress was organized after the passage of these Acts.",
+            desc:"A collection of acts created to punish Massachusetts following the Boston Tea Party. It blockaded Boston Harbor and made it virtually useless until restitution was paid for the Boston Tea Party damages and gave control of Massachusetts directly to the crown; additionally, it passed a new and more powerful Quartering Act. These acts were seen as the final straw by many."
+        },
+        "First Continental Congress":{
+            reasonForDecade:"The 1770s were the peak of colonial resistance. This is the decade when colonists were thoroughly frustrated with the British and began seeing independence as an option. The First Continental Congress was organized as a response to the Intolerable Acts.",
+            desc:"A group of delegates from every state except Georgia organized a meeting to discuss how to address and respond to Britain's increasing tyranny. They adopted the Suffolk Resolves-- which, among other things, organized a boycott of British goods until the Intolerable Acts were repealed-- and the Declaration and Resovles-- a statement including a bill of rights and a list of grievances. Neither were accepted by British Parliament."
+        },
+        "Thomas Paine's \"Common Sense\"":{
+            reasonForDecade:"The 1770s were the peak of colonial resistance. This is the decade when colonists were thoroughly frustrated with the British and began seeing independence as an option. \"Common Sense\" was the first widely known publication that pushed independence as the only solution for the colonists' struggle and British tyranny, and it was imperative in shifting the majority of public opinion in favor of independence.",
+            desc:"A publication openly criticizing the British government and emphasizing that independence was the only practical and reasonable goal the colonists should aim for. It was the first known public work to push for full-fledged independence."
+        },
+        "Lexington and Concord":{
+            reasonForDecade:"The Revolutionary War started and ended in the 1770s, and this was its first battle. It was in the same decade as the Boston Massacre, the Boston Tea Party, and the passage of the Intolerable Acts-- all events building up to it.",
+            desc:"The first battle of the Revolutionary War."
+        },
+        "Revolutionary War":{
+            reasonForDecade:"The Revolutionary War is in the same decade as and a result of buildup from events like the Boston Massacre, the Boston Tea Party, and the Intolerable Acts.",
+            desc:""
+        },
+        "Declaration of Independence":{
+            reasonForDecade:"The Declaration of Independence was written during the Revolutionary War.",
+            desc:""
+        },
+        "Second Continental Congress":{
+            reasonForDecade:"The Second Continental Congress took place during the Revolutionary War, and was also where the Declaration of Independence was adopted.",
+            desc:"A group of delegates from the thirteen colonies which functioned as the de facto government during the Revolutionary War. They wrote a number of petitions, including the Olive Branch Petition. They met continuously until past 1780."
+        },
+        "Olive Branch Petition":{
+            reasonForDecade:"The Olive Branch Petition was written during the Second Continental Congress, which operated during the Revolutionary War.",
+            desc:"A petition sent to King George III, this was the final American attempt to avoid war. It urged King George III to avoid further conflict and sought reconciliation. King George III refused to receive it."
         }
     }
 
