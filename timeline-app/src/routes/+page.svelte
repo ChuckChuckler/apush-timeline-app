@@ -57,7 +57,7 @@
         "1780-89":[
             "Ratification of the Articles of Confederation",
             "Land Ordinance of 1785",
-            "Shay's Rebellion",
+            "Shays' Rebellion",
             "Northwest Ordinance",
             "Constitution ratified",
             "French Revolution",
@@ -386,10 +386,36 @@
         "Olive Branch Petition":{
             reasonForDecade:"The Olive Branch Petition was written during the Second Continental Congress, which operated during the Revolutionary War.",
             desc:"A petition sent to King George III, this was the final American attempt to avoid war. It urged King George III to avoid further conflict and sought reconciliation. King George III refused to receive it."
+        },
+        "Ratification of the Articles of Confederation":{
+            reasonForDecade:"The Articles of Confederation was created after the Second Continental Congress to replace it. The government was ratified and put in power near the end of the Revolutionary War, after the 1770s. It could be seen as Second Continental Congress = 1770s, Articles of Confederation = 1780s.",
+            desc:"This document created the first constitutional government of the US. Debates and disputes resulted in the government established by this document being a weak one-- it was later replaced by a much stronger central government via the Constitution."
+        },
+        "Land Ordinance of 1785":{
+            reasonForDecade:"Following the end of the Revolutionary War, the newly-created United States spent this decade planning and organizing themselves. The Land Ordinance of 1785 was vital in organizing how to sell land, which is (obviously) very important for a burgeoning nation.",
+            desc:"This document established a system for settlers to purchase land in the west."
+        },
+        "Shays' Rebellion":{
+            reasonForDecade:"Following the end of the Revolutionary War, the newly-created United States spent this decade planning and organizing themselves. Shays' Rebellion was an imperative wake-up call, highlighting the weaknesses in the Articles of Confederatino and emphasizing the fact that a new constitution and means of governing was necessary.",
+            desc:"Settlers in many states were victim to harsh debt. Legislatures failed to provide relief for the debt crisis. Angered, a group of violent dissenters in Massachusetts protested and physically attacked debt collectors. The rebellion was quelled with military force."
+        },
+        "Northwest Ordinance":{
+            reasonForDecade:"Following the end of the Revolutionary War, the newly-created United States spent this decade planning and organizing themselves. The Northwest Ordinance created and organized a new territory, a territory which was ceded to the US by Britain after the Revolutionary War (which ended in the same decade).",
+            desc:"This document split the new Northwest Territory into 3-5 states, establishing a bill of rights (which, among other things, protected religious freedom and individual rights), and prohibiting slavery in these states."
+        },
+        "Constitution ratified":{
+            reasonForDecade:"Following the end of the Revolutionary War, the newly-created United States spent this decade planning and organizing themselves. The Constitution was created and ratified at the end of the 1780s to rectify weaknesses in the Articles of Confederation.",
+            desc:"The ratification of the iconic document creating the US government as we know it today."
+        },
+        "French Revolution":{
+            reasonForDecade:"The French Revolution was inspired by the successful American Revolution, which ended in the same decade.",
+            desc:"A revolutionary movement in France that overthrew the monarchy, seeking self-government and liberal democracy."
+        },
+        "Washington becomes president":{
+            reasonForDecade:"Washington was the first president of the United States. He was appointed after the Constitution was ratified.",
+            desc:""
         }
     }
-
-    let eventsReasonDefinition
     let learnDiv:string=$state("display:none");
     let practiceDiv:string=$state("display:none");
     let resultsDiv:string=$state("display:none");
