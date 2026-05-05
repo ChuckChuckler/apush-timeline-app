@@ -514,6 +514,22 @@
             reasonForDecade:"",
             desc:"This president was known for depicting himself as a \"common man\"-- his presidential campaign was centered around this. He was the first Democratic (not modern) president, and was known also for his aggressive policies-- notably the Trail of Tears-- and his abuse of the power of veto."
         },
+        "Indian Removal Act":{
+            reasonForDecade:"Andrew Jackson is infamous for the Indian Removal Act, which he signed in his first term as president.",
+            desc:"To clear out land for white settlement, Andrew Jackson signed this act, which faciliated the relocation of Native Americans to allocated areas west of the Mississipi. It was framed as voluntary, but was the exact opposite-- thousands of Native Americans were forced down the hazardous Trail of Tears, leading to countless deaths and casualties."
+        },
+        "Whig Party founded":{
+            reasonForDecade:"Andrew Jackson's aggressive abuse of executive power led to the creation of this party during his second term.",
+            desc:"Upset by Andrew Jackson's-- \"King Andrew's\"-- power-abusing presidency, a coalition of smaller anti-Jackson parties-- including the National Republican Party-- formed this party. It remained active until the 1850s, when it fell due to sectionalism over slavery."
+        },
+        "Texas Revolution":{
+            reasonForDecade:"",
+            desc:"At this time, Texas was a Mexican territory. Under Santa Anna, the Mexican government shifted from a federalist system to a centralized dictatorship, which affected Texas as well. That, combined with disputes over slavery and other cultural/political differences, led to American immigrants (who had been encouraged to move to Texas by empresarios) and Hispanic Texans revolting against the government."
+        },
+        "Panic of 1837":{
+            reasonForDecade:"Andrew Jackson left office right as the Panic of 1837 began, leaving the next president (Martin Van Buren) to clean up his mess. It was also partly due to him being so against a national bank.",
+            desc:"A financial crisis that erupted at the end of Andrew Jackson's second term, due in part to Jackson refusing to extend the charter of the Second Bank of the US. Following this was an economic collapse and a depression that lasted until the mid-1840s."
+        },
 
     }
     let learnDiv:string=$state("display:none");
