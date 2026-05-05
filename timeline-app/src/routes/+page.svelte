@@ -71,6 +71,7 @@
         ],
         "1800-09":[
             "Jefferson elected",
+            "Marbury v. Madison",
             "Second Great Awakening begins",
             "Expansion of universal white male suffrage",
             "Temperance Movement begins",
@@ -81,11 +82,13 @@
         ],
         "1810-19":[
             "First Bank of US falls",
+            "War of 1812",
             "Congress begins enacting American System programs",
             "Second Bank of US created"
         ],
         "1820-29":[
             "Monroe Doctrine",
+            "Missouri Compromise",
             "Opening of first mill in Lowell",
             "Democratic Party founded",
             "Erie Canal completed",
@@ -435,6 +438,10 @@
             reasonForDecade:"It's helpful to remember Jefferson as the president who started the 19th century.",
             desc:""
         },
+        "Marbury v. Madison":{
+            reasonForDecade:"This happened right as Jefferson was elected-- Jefferson's election started the 1800s.",
+            desc:"John Adams (a Federalist), after Thomas Jefferson (Democratic-Republican) was elected, appointed several judges of his party to the Supreme Court. John Marshall, Adams' Secretary of State, was not able to deliver all of the commissions; Jefferson assumed these to be void and ordered James Madison-- his Secretary of State at the time-- not to deliver them. One of the judges appointed by Adams had been William Marbury, who filed a lawsuit.\nThis case was crucial in determining the judicial branch's power. The Supreme Court struck down the Judiciary Act of 1789 as unconstitutional-- this was the first use of what is now known as judiciary review."
+        },
         "Second Great Awakening begins":{
             reasonForDecade:"There were a few movements and moral reforms happening with Jefferson's election during the decade 1800-09. You could group the Second Great Awakening, expansion of universal white male suffrage, the beginning of the Temperance Movement, and the prohibition of the international slave trade-- abolition-- together, especially since the Second Great Awakening is the cause of many of the mentioned movements.",
             desc:"A religious movement which spread through revivals and meetings in camps. While not as emotionally charged or focused on sin as its earlier counterpart, this movement was essential in sparking moral and social reform, leading to many reform movements like temperance and abolition."
@@ -463,7 +470,50 @@
             reasonForDecade:"There were a few movements and moral reforms happening with Jefferson's election during the decade 1800-09. You could group the Second Great Awakening, expansion of universal white male suffrage, the beginning of the Temperance Movement, and the prohibition of the international slave trade-- abolition-- together, especially since the Second Great Awakening is the cause of many of the mentioned movements.",
             desc:"This happened as a result of a clause in the Constitution reaching its limit, the abolition movement blooming through the Second Great Awakening, and various other social, political, and moral factors."
         },
-
+        "First Bank of US falls":{
+            reasonForDecade:"The Second Bank of the US was created after the charter for this one expired.",
+            desc:""
+        },
+        "War of 1812":{
+            reasonForDecade:"",
+            desc:"This was fought to maintain US sovereignty against British impressment. It established a sense of national identity, but was considered by many, frankly, not very necessary-- the treaty signed following the war established no territorial or power gains, and nothing significant changed overall."
+        },
+        "Congress begins enacting American System programs":{
+            reasonForDecade:"",
+            desc:"These were part of an economic plan created and championed by Henry Clay. The plan established high tariffs, internal improvements, and the chartering of a new national bank (the Second Bank of the US)."
+        },
+        "Second Bank of US created":{
+            reasonForDecade:"This was part of Henry Clay's American System plan, which was introduced in this decade.",
+            desc:"This was established as part of Henry Clay's American System to replace its earlier counterpart, the charter of which had expired."
+        },
+        "Monroe Doctrine":{
+            reasonForDecade:"The Monroe Doctrine and the Missouri Compromise were both in 1820, which may make it easier to memorize.",
+            desc:"This document was passed to establish separate spheres of influence and oppose foreign interference. It was a warning to European countries that any intervention in the Americas by foreign powers would be seen as hostility against the US."
+        },
+        "Missouri Compromise":{
+            reasonForDecade:"The Monroe Doctrine and the Missouri Compromise were both in 1820, which may make it easier to memorize.",
+            desc:"Proposed by Henry Clay, this document was created to maintain the balance between free and slave states. It added Maine to the US as a free state, added Missouri as a slave state, and prohibited slavery in portions of the Louisiana Purchase north of the 36°30' line."
+        },
+        "Opening of first mill in Lowell":{
+            reasonForDecade:"The Market Revolution began in 1820. The opening of the first mill in Lowell and the completion of the Erie Canal are two things that happened during the Market Revolution.",
+            desc:""
+        },
+        "Democratic Party founded":{
+            reasonForDecade:"Andrew Jackson was the first Democratic president, and he was elected in 1828. In fact, the Democratic party was created because of Andrew Jackson.",
+            desc:"After the controversial election of 1824, the Democratic-Republicans split into two factions. Supporters of Andrew Jackson created this party. The other faction, the National Republican party, later became part of the Whigs."
+        },
+        "Erie Canal completed":{
+            reasonForDecade:"The Market Revolution began in 1820. The opening of the first mill in Lowell and the completion of the Erie Canal are two things that happened during the Market Revolution.",
+            desc:"Completed in the 1820s, this was a waterway which connected the US to the Atlantic Ocean. It faciliated trade and travel and revolutionalized American commerce; additionally, it established New York as a major trade capital."
+        },
+        "Market Revolution starts":{
+            reasonForDecade:"The Erie Canal and the opening of the first mills were part of the Market Revolution, and both were also in the 1820s.",
+            desc:"This era marked a shift in US economy from cottage industry and subsistence farming to commercial agriculture and a market-based economy. It was characterized by innovations in trade and commerce, the invention of new tools and facilities, and the beginnings of industrial manufacturing."
+        },
+        "Andrew Jackson elected":{
+            reasonForDecade:"",
+            desc:"This president was known for depicting himself as a \"common man\"-- his presidential campaign was centered around this. He was the first Democratic (not modern) president, and was known also for his aggressive policies-- notably the Trail of Tears-- and his abuse of the power of veto."
+        },
 
     }
     let learnDiv:string=$state("display:none");
