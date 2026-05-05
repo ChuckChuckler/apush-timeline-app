@@ -440,7 +440,7 @@
         },
         "Marbury v. Madison":{
             reasonForDecade:"This happened right as Jefferson was elected-- Jefferson's election started the 1800s.",
-            desc:"John Adams (a Federalist), after Thomas Jefferson (Democratic-Republican) was elected, appointed several judges of his party to the Supreme Court. John Marshall, Adams' Secretary of State, was not able to deliver all of the commissions; Jefferson assumed these to be void and ordered James Madison-- his Secretary of State at the time-- not to deliver them. One of the judges appointed by Adams had been William Marbury, who filed a lawsuit.\nThis case was crucial in determining the judicial branch's power. The Supreme Court struck down the Judiciary Act of 1789 as unconstitutional-- this was the first use of what is now known as judiciary review."
+            desc:"This case was crucial in determining the judicial branch's power. The Supreme Court struck down the Judiciary Act of 1789 as unconstitutional-- this was the first use of what is now known as judiciary review."
         },
         "Second Great Awakening begins":{
             reasonForDecade:"There were a few movements and moral reforms happening with Jefferson's election during the decade 1800-09. You could group the Second Great Awakening, expansion of universal white male suffrage, the beginning of the Temperance Movement, and the prohibition of the international slave trade-- abolition-- together, especially since the Second Great Awakening is the cause of many of the mentioned movements.",
@@ -558,7 +558,30 @@
             reasonForDecade:"It may be helpful to group Brigham Young, Utopian Communities, and the Seneca Falls convention together, since all three were linked to or were religious/social movements in the 1840s.",
             desc:"Taking place in New York in the 1840s, this was the first formal women's rights convention and the official launch of the women's suffrage movement. One important figure involved was Elizabeth Cady Stanton. Produced during the event was the Declaration of Sentiments, which was very similar stylistically to the Declaration of Independence."
         },
-
+        "Compromise of 1850":{
+            reasonForDecade:"The 1850s was a turbulent time where conflict was growing between the North and South mostly over slavery. Many of the events directly built up to the secession of South Carolina and the start of the Civil War. One of the terms of the Compromise of 1850 was a stronger fugitive slave law. This fugitive slave law would go on to create even more tension-- most Northeners continued to disobey the law-- protecting and helping escaped slaves-- which angered the South.",
+            desc:"After the Treaty of Guadalupe-Hidalgo was signed and the US gained new land, there was heated debate regarding the balance of free and slave states. Most Northerners-- many of whom were abolitionists-- did not want more slave states. On the other hand, most Southerners feared losing their political standing should the free states outnumber the slave states. After a long debate, in which Henry Clay (the original proposer, moderate), Daniel Webster (anti-slavery, in support), and John C. Calhoun (pro-slavery, against) were most prominent, this compromise was created.\nThis compromise most importantly admitted California into the Union as a free state, gave Utah and New Mexico popular sovereignty to decide slavery, and created a new, stronger fugitive slave law."
+        },
+        "Know-Nothing Party becomes popular":{
+            reasonForDecade:"",
+            desc:"This is a nativist party that became popular in the 1850s. It was composed notably of white Protestants who were anti-immigrant and anti-catholic."
+        },
+        "Free Soil Party fades":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Republican Party founded":{
+            reasonForDecade:"The 1850s was a turbulent time where conflict was growing between the North and South mostly over slavery. The Republican Party emerged as a direct result of the slavery debate-- it was a coalition of various smaller parties or remains of parties who opposed the spread of slavery. The Kansas-Nebraska Act-- which is also in this decade-- is considered a catalyst of its formation.",
+            desc:"After the passage of the Kansas-Nebraska Act, former members of the now-fallen Whig Party joined to create this party. This party was fueled by antislavery sentiment, whether that be simply stopping the expansion of slavery or abolishing it altogether. Over time, this party has evolved to hold a viewpoint that is very different than it was when it was originally formed.",
+        },
+        "Kansas-Nebraska Act":{
+            reasonForDecade:"The 1850s was a turbulent time where conflict was growing between the North and South mostly over slavery. Many of the events directly built up to the secession of South Carolina and the start of the Civil War. The violence that resulted from the Kansas-Nebraska Act fueled antislavery sentiment in the Republican Party and increased tensions between proslavery and antislavery groups.",
+            desc:"This act split the territory immediately west of Missouri into Kansas and Nebraska, and declared that the issue of slavery would be decided through popular sovereignty for both. Aside from repealing the Missouri Compromise (as both of these states would have been free states under it), this act also led to great bloodshed. Immediately after passage, antislavery Northerners and proslavery Southerners rushed to Nebraska and Kansas to gain control of these states and determine their status. Violence erupted, so much so that Kansas was nicknamed \"Bleeding Kansas\"."
+        },
+        "Dred Scott Decision":{
+            reasonForDecade:"The 1850s was a turbulent time where conflict was growing between the North and South mostly over slavery. Many of the events directly built up to the secession of South Carolina and the start of the Civil War. The Dred Scott decision especially angered many Northerners and gave the Republican party more to fight for.",
+            desc:"This was a landmark Supreme Court decision which ruled that Black people could not become citizens, and, more prominently, that slaves were considered property. By this logic, limiting slavery in certain territories was unconstitutional as it would infringe on the natural right to property. This invalidated every compromise that had been created to maintain the balance between free and slave states."
+        },
     }
     let learnDiv:string=$state("display:none");
     let practiceDiv:string=$state("display:none");
