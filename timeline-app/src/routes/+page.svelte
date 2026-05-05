@@ -430,7 +430,40 @@
         "Invention of cotton gin":{
             reasonForDecade:"",
             desc:"A machine that greatly faciliated the process of separating the seeds from cotton."
-        }
+        },
+        "Jefferson elected":{
+            reasonForDecade:"It's helpful to remember Jefferson as the president who started the 19th century.",
+            desc:""
+        },
+        "Second Great Awakening begins":{
+            reasonForDecade:"There were a few movements and moral reforms happening with Jefferson's election during the decade 1800-09. You could group the Second Great Awakening, expansion of universal white male suffrage, the beginning of the Temperance Movement, and the prohibition of the international slave trade-- abolition-- together, especially since the Second Great Awakening is the cause of many of the mentioned movements.",
+            desc:"A religious movement which spread through revivals and meetings in camps. While not as emotionally charged or focused on sin as its earlier counterpart, this movement was essential in sparking moral and social reform, leading to many reform movements like temperance and abolition."
+        },
+        "Expansion of universal white male suffrage":{
+            reasonForDecade:"There were a few movements and moral reforms happening with Jefferson's election during the decade 1800-09. You could group the Second Great Awakening, expansion of universal white male suffrage, the beginning of the Temperance Movement, and the prohibition of the international slave trade-- abolition-- together, especially since the Second Great Awakening is the cause of many of the mentioned movements.",
+            desc:""
+        },
+        "Temperance Movement begins":{
+            reasonForDecade:"There were a few movements and moral reforms happening with Jefferson's election during the decade 1800-09. You could group the Second Great Awakening, expansion of universal white male suffrage, the beginning of the Temperance Movement, and the prohibition of the international slave trade-- abolition-- together, especially since the Second Great Awakening is the cause of many of the mentioned movements.",
+            desc:"The Second Great Awakening contributed to the growing idea that alcohol was a cause of wicked deeds and sentiment and the evil in society. This movement was started to limit alcohol-- some promoted moderation, others pushed for full abstinence; some others pushed for it to be outlawed completely."
+        },
+        "Napoleonic Wars in Europe":{
+            reasonForDecade:"One of the things Jefferson is best known for is the Louisiana Purchase. Both the Louisiana Purchase and the Embargo Act are direct results of the Napoleonic Wars.",
+            desc:"Conflicts arising from Napoleon's desire for conquest."
+        },
+        "Louisiana Purchase":{
+            reasonForDecade:"This is one of the most important things that Jefferson is known for. It's crucial to know that this happened during his presidency.",
+            desc:"Desperate for money to fund his war efforts, Napoleon sold a vast French territory to Jefferson for a very cheap price. This territory came to make up a large number of states in the modern Central US."
+        },
+        "Embargo Act":{
+            reasonForDecade:"Unlike the Louisiana Purchase, for which Jefferson is famous, the Embargo Act was actually something Jefferson was infamous for. Both were results of the Napoleonic Wars, which were happening in the early 1800s.",
+            desc:"During the Napoleonic Wars, Britain began seizing US ships and impressing US sailors-- the Cheseapeake Affair is good to remember. As a response, Jefferson signed this act, which closed all US ports to export shipping. Jefferson hoped that signing this act would force Britain and France to respect American sovereignty. In reality, the act harmed the US much more than it did the European countries, and it was later repealed."
+        },
+        "Prohibition of international slave trade":{
+            reasonForDecade:"There were a few movements and moral reforms happening with Jefferson's election during the decade 1800-09. You could group the Second Great Awakening, expansion of universal white male suffrage, the beginning of the Temperance Movement, and the prohibition of the international slave trade-- abolition-- together, especially since the Second Great Awakening is the cause of many of the mentioned movements.",
+            desc:"This happened as a result of a clause in the Constitution reaching its limit, the abolition movement blooming through the Second Great Awakening, and various other social, political, and moral factors."
+        },
+
 
     }
     let learnDiv:string=$state("display:none");
