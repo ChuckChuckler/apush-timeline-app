@@ -530,6 +530,34 @@
             reasonForDecade:"Andrew Jackson left office right as the Panic of 1837 began, leaving the next president (Martin Van Buren) to clean up his mess. It was also partly due to him being so against a national bank.",
             desc:"A financial crisis that erupted at the end of Andrew Jackson's second term, due in part to Jackson refusing to extend the charter of the Second Bank of the US. Following this was an economic collapse and a depression that lasted until the mid-1840s."
         },
+        "James K. Polk elected":{
+            reasonForDecade:"The Mexican-American War was won under James K. Polk.",
+            desc:"The president known for the Mexican-American War which, despite being a cruel act of imperialism, also added a vast area to the United States."
+        },
+        "Brigham Young becomes leader of Latter-day Saints":{
+            reasonForDecade:"It may be helpful to group Brigham Young, Utopian Communities, and the Seneca Falls convention together, since all three were linked to or were religious/social movements in the 1840s.",
+            desc:"This happened during the Mormon exodus to the Salt Lake Valley in Utah."
+        },
+        "Mexican-American War":{
+            reasonForDecade:"This is one of if not the thing that James K. Polk is known most for. Additionally, territorial gains from the Treaty of Guadalupe-Hidalgo-- which was signed at the end of this war-- contributed to rising sectionalism in the next decade (1850s). A way to look at it is that the Mexican American War, 1840s, led to the growing sectionalism crisis and debate over slavery, 1850s, which led to the Civil War, 1860s.",
+            desc:"This war was the most prominent demonstration of the Manifest Destiny sentiment. Caused by the annexation of Texas, border disputes, and provocation from Polk, its culmination led to a vast area of land being annexed to the US."
+        },
+        "Treaty of Guadalupe-Hidalgo":{
+            reasonForDecade:"The treaty of Guadalupe-Hidalgo, signed after the Mexican-American War, added a lot of new territory to the US. This territory was subject to much debate in the following decade (1850s). A way to look at it is that the Mexican American War, 1840s, led to the growing sectionalism crisis and debate over slavery, 1850s, which led to the Civil War, 1860s.",
+            desc:"Signed after the Mexican-American War, this treaty granted to the US a huge territory for an unfairly cheap price. While this territory makes up much of the US as it is today, it was also the reason for many heated debates that ultimately contributed to the start of the Civil War."
+        },
+        "Utopian Communities emerge":{
+            reasonForDecade:"It may be helpful to group Brigham Young, Utopian Communities, and the Seneca Falls convention together, since all three were linked to or were religious/social movements in the 1840s.",
+            desc:""
+        },
+        "Free Soil Party emerges":{
+            reasonForDecade:"The Free Soil Party emerged after the Treaty of Guadalupe-Hidalgo introduced new territories from which slave states could potentially be made. They did not want new slave states.",
+            desc:"This party emerged from disputes over slavery. They opposed not slavery, but specifically the spread of it-- members of this party feared that slave labor would take their jobs."
+        },
+        "Seneca Falls convention":{
+            reasonForDecade:"It may be helpful to group Brigham Young, Utopian Communities, and the Seneca Falls convention together, since all three were linked to or were religious/social movements in the 1840s.",
+            desc:"Taking place in New York in the 1840s, this was the first formal women's rights convention and the official launch of the women's suffrage movement. One important figure involved was Elizabeth Cady Stanton. Produced during the event was the Declaration of Sentiments, which was very similar stylistically to the Declaration of Independence."
+        },
 
     }
     let learnDiv:string=$state("display:none");
