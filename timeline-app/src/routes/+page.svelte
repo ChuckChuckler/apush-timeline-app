@@ -414,7 +414,24 @@
         "Washington becomes president":{
             reasonForDecade:"Washington was the first president of the United States. He was appointed after the Constitution was ratified.",
             desc:""
+        },
+        "Naturalization Act of 1790":{
+            reasonForDecade:"",
+            desc:"This law was passed to define the basis for naturalization. While it outlined that citizenship was granted to \"free white persons\", this only applied to free white men who owned property-- women, indentured workers, and persons of color were not given this right."
+        },
+        "First Bank of US created":{
+            reasonForDecade:"With a national government established in the last half of the previous decade-- the 1780s-- the US needed to organize an economy.",
+            desc:"The first national bank, created in Alexander Hamilton's Financial Plan to stabilize the economy post-Revolution. While it did not operate like a modern bank, it was able to maintain branches in multiple states. Its charter expired some 20 years later, and it was replaced under James Madison."
+        },
+        "Whiskey Rebellion":{
+            reasonForDecade:"The federal government had been established in the decade prior (1780s), but the federal government's authority was not truly demonstrated until this event. ",
+            desc:"A tax was placed on whiskey and other liquors. For frontier farmers who made their crop into whiskey and made a living from it, this tax was unfair and destructive to their livelihoods. Protests turned into a violent uprising. As a response, Washington sent troops to successfully quell the rebellion-- this was the first demonstration of federal authority after the instantiation of the Constitution."
+        },
+        "Invention of cotton gin":{
+            reasonForDecade:"",
+            desc:"A machine that greatly faciliated the process of separating the seeds from cotton."
         }
+
     }
     let learnDiv:string=$state("display:none");
     let practiceDiv:string=$state("display:none");
