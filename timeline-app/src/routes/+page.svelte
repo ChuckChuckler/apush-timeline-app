@@ -608,7 +608,7 @@
         },
         "Completion of first Transcontinental Railroad":{
             reasonForDecade:"The transcontinental railroad was completed by the end of the 1860s, and it helped contribute to the start of the Gilded Age in the following decade.",
-            desc:""
+            desc:"This made travel over long distances via railroad possible for the first time."
         },
     }
     let learnDiv:string=$state("display:none");
