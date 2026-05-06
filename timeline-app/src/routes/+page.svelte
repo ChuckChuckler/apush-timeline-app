@@ -582,6 +582,34 @@
             reasonForDecade:"The 1850s was a turbulent time where conflict was growing between the North and South mostly over slavery. Many of the events directly built up to the secession of South Carolina and the start of the Civil War. The Dred Scott decision especially angered many Northerners and gave the Republican party more to fight for.",
             desc:"This was a landmark Supreme Court decision which ruled that Black people could not become citizens, and, more prominently, that slaves were considered property. By this logic, limiting slavery in certain territories was unconstitutional as it would infringe on the natural right to property. This invalidated every compromise that had been created to maintain the balance between free and slave states."
         },
+        "Lincoln elected":{
+            reasonForDecade:"Lincoln was president during the Civil War.",
+            desc:"This is the president that led the Union through the Civil War."
+        },
+        "South Carolina secedes":{
+            reasonForDecade:"South Carolina was the first state to secede during the Civil War.",
+            desc:"This happened after Lincoln-- a Republican, antislavery president-- was elected. Fears that their \"way of life\" was being threatened and that the institution of slavery would be abolished led to this."
+        },
+        "Confederacy formed":{
+            reasonForDecade:"This was during the Civil War. The Confederacy-- proslavery states-- fought against the Union-- antislavery states.",
+            desc:"To protect slavery, 11 Southern states seceded from the Union. They fought against the antislavery Union during the Civil War."
+        },
+        "Civil War":{
+            reasonForDecade:"You really should know that the Civil War was 1861-1865. Trust me. You want to know this.",
+            desc:"The war between the Union-- Northern states-- and the Confederacy-- Southern states. It erupted over slavery: antislavery Northerners wanted to limit it-- whether that be by preventing its expansion or abolishing it altogether-- and proslavery Southerners saw this as a threat to their livelihood and \"way of life\"."
+        },
+        "Emancipation Proclamation":{
+            reasonForDecade:"Abraham Lincoln issued the Emancipation Proclamation during the Civil War, and it was also effective during it.",
+            desc:"This document declared all slaves in Confederate states free. It did NOT end slavery. It only freed slaves in states that were \"openly in rebellion\"; slaves in border states or previously Confederate states that were already under Union control were not freed. Still, it was a very good first step."
+        },
+        "Reconstruction begins":{
+            reasonForDecade:"Reconstruction began after the end of the Civil War, which was in the mid 1860s (1865 to be exact).",
+            desc:"The decade-long period following the end of the Civil War, which focused on reunifying/reintegrating the Confederate states into the Union and defining and protecting the civil rights of newly-emancipated African Americans. This era, despite its intentions, was nonetheless marked by corruption, violence (notably, the first surgence of the KKK), and suppression; it was only partially successful when it ended."
+        },
+        "Completion of first Transcontinental Railroad":{
+            reasonForDecade:"The transcontinental railroad was completed by the end of the 1860s, and it helped contribute to the start of the Gilded Age in the following decade.",
+            desc:""
+        },
     }
     let learnDiv:string=$state("display:none");
     let practiceDiv:string=$state("display:none");
