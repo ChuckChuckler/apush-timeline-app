@@ -610,6 +610,30 @@
             reasonForDecade:"The transcontinental railroad was completed by the end of the 1860s, and it helped contribute to the start of the Gilded Age in the following decade.",
             desc:"This made travel over long distances via railroad possible for the first time."
         },
+        "Gilded Age begins":{
+            reasonForDecade:"It's very helpful to remember the 1870s as the decade when the Gilded Age started. The Gilded Age and affairs related to it practically dominated the 1870s.",
+            desc:"This era was characterized by rapid industrialization, urbanization, and economic growth. This is where the term \"American Dream\" came from. Although depicted as something extravagant and exciting, this era was actually filled with corruption and strife as the wealth disparity grew larger and many fell into poverty. The Great Gatsby!!!"
+        },
+        "Social Gospel movement begins":{
+            reasonForDecade:"The Social Gospel movement emerged as a response to the corruption during the Gilded Age.",
+            desc:"A social reform movement built on ideas of Christianity. Members of this movement believed that it was their God-given duty to provide for and better society. Aside from social justice, this movement focused most of all on labor reforms-- ending child labor, unionization, and fair working conditions."
+        },
+        "Rockefeller Oil founded":{
+            reasonForDecade:"Rockefeller Oil was founded during the Gilded Age and is an excellent example of what the Gilded Age entailed-- shiny extravagance on the outside, corruption on the inside.",
+            desc:"Founded by who later became the world's first billionare, this company was notorious for corruption, coercion, and underhanded tactics that made it a monopoly over its industry."
+        },
+        "the New South":{
+            reasonForDecade:"The New South emerged after the end of Reconstruction.",
+            desc:"The South following Reconstruction."
+        },
+        "Conviction of Boss Tweed":{
+            reasonForDecade:"The Gilded Age brought rapid growth not just in industry, but also in urbanization. As cities grew, so did urban political machines-- and corruption.",
+            desc:"This man was the notorious boss of Tamany Hall, the largest Democratic political machine in New York. Made wealthy through bribes and money laundering, he was arrested and later became the basis of the stereotype for rich, corrupt businessmen."
+        },
+        "Reconstruction ends (Rutherford B. Hayes)":{
+            reasonForDecade:"Reconstruction lasted a decade. It started at the end of the Civil War and ended in 1877 with the election of Rutherford B. Hayes.",
+            desc:"The Compromise of 1877 was the main event that led to this. The terms of the compromise included withdrawing Union soldiers from the South in exchange for the presidental victory going to Rutherford B. Hayes, the Republican candidate."
+        }
     }
     let learnDiv:string=$state("display:none");
     let practiceDiv:string=$state("display:none");
