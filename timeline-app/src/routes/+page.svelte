@@ -308,7 +308,7 @@
         },
         "Metacom's War":{
             reasonForDecade:"It can help to group together Metacom's War, Bacon's Rebellion, and the Pueblo Revolt, as all three were rebellions involving Native American people prior to the Revolutionary War/creation of the United States.",
-            desc:"A conflict between a coalition of Native Americans and New England colonists + their Native American allies. It was the last (?????? idk continue this once we have more info)"
+            desc:"A conflict between a coalition of Native Americans and New England colonists. With the colonists' victory, it crushed Native resistance in New England."
         },
         "Bacon's Rebellion":{
             reasonForDecade:"It can help to group together Metacom's War, Bacon's Rebellion, and the Pueblo Revolt, as all three were rebellions involving Native American people prior to the Revolutionary War/creation of the United States.",
@@ -808,13 +808,20 @@
     }
 
     let termToLearn:string=$state("");
-    function showSettings(){
-        settingsDiv="display:block";
-        resultsDiv="display:none";
+
+    function endPractice(){
         for(let i in includedEvents){
             includedPeriodsElements[i].resetEvents();
             resultsPeriods[i].resetEvents();
         }
+        showSettings();
+    }
+    function showSettings(){
+        settingsDiv="display:block";
+        resultsDiv="display:none";
+        learnDiv="display:none";
+        correct=0;
+        totalAnswered=0;
         practicedTerms = [];
         unusedTerms = [];
         chosenEvent = "";
@@ -837,6 +844,7 @@
 
     function learn(){
         ansSelected=false;
+        nextButton = "display:none";
 
         button0Color="background-color:#535170";
         button1Color="background-color:#535170";
@@ -844,7 +852,7 @@
         button3Color="background-color:#535170";
 
         termToLearn=unusedTerms[Math.floor(Math.random()*unusedTerms.length)];
-        while(eventsInformation[termToLearn].desc==""){
+        while(eventsInformation[termToLearn]==undefined || eventsInformation[termToLearn].desc==""){
             termToLearn=unusedTerms[Math.floor(Math.random()*unusedTerms.length)];
         }
         correctNum = Math.floor(Math.random()*4);
@@ -885,8 +893,7 @@
                 if(i==toReturn){
                     isReturnable=false;
                 }
-                console.log(eventsInformation[unusedTerms[toReturn]].desc);
-                if(eventsInformation[unusedTerms[toReturn]].desc==""){
+                if(eventsInformation[unusedTerms[toReturn]]==undefined || eventsInformation[unusedTerms[toReturn]].desc==""){
                     isReturnable=false;
                 }
             }
@@ -894,17 +901,17 @@
         return toReturn;
     }
 
-    let nextButton=$state("opacity:0");
+    let nextButton=$state("display:none");
 
-    let totalAnswered:number=0;
-    let correct:number=0;
+    let totalAnswered:number=$state(0);
+    let correct:number=$state(0);
 
     function checkAnswer(selected:string, buttonFrom:number){
-        totalAnswered++;
-        if(selected==eventsInformation[termToLearn].desc){
-            correct++;
-        }
         if(!ansSelected){
+            totalAnswered++;
+            if(selected==eventsInformation[termToLearn].desc){
+                correct++;
+            }
             if(buttonFrom==0){
                 button0Color="background-color:#804D4D;border:1.5px #FF9191 solid";
             }else if(buttonFrom==1){
@@ -926,7 +933,7 @@
             }
 
             ansSelected=true;
-            nextButton = "opacity:1";
+            nextButton = "display:block";
         }
     }
 </script>
@@ -1078,6 +1085,10 @@
     </div>
 
     <div class="w-[80%] h-[95vh] m-auto bg-[#767493] rounded-[20px] box-border p-[15px] overflow-auto" style={learnDiv}>
+        <div class="flex justify-between w-[95%]">
+            <button class="text-white istok-web" onclick={showSettings}>back</button>
+            <h3 class="text-white istok-web">{correct}/{totalAnswered}</h3>
+        </div>
         <div class="h-[15%] flex items-center justify-center">
             <div class="text-center">
                 <h3 class="text-white istok-web-bold text-[20px]">{termToLearn}</h3>
@@ -1088,22 +1099,30 @@
             <button style={button0Color} onmouseover={function(){
                 button0Color.includes("background-color:#535170")?button0Color="background-color:#494763":button0Color+=""
             }} 
-            onfocus={function(){button0Color="background-color:#494763"}} onmouseleave={function(){button0Color.includes("background-color:#494763")?button0Color="background-color:#535170":button0Color+=""}} class="scrollbar rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px] h-[35vh] overflow-auto" onclick={function(){checkAnswer(button0,0)}}>{button0}</button>
+            onfocus={function(){
+                button0Color.includes("background-color:#535170")?button0Color="background-color:#494763":button0Color+=""
+            }}  onmouseleave={function(){button0Color.includes("background-color:#494763")?button0Color="background-color:#535170":button0Color+=""}} class="scrollbar rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px] h-[33vh] overflow-auto" onclick={function(){checkAnswer(button0,0)}}>{button0}</button>
             
             <button style={button1Color} onmouseover={function(){
                 button1Color.includes("background-color:#535170")?button1Color="background-color:#494763":button1Color+=""
             }} 
-            onfocus={function(){button1Color="background-color:#494763"}} onmouseleave={function(){button1Color.includes("background-color:#494763")?button1Color="background-color:#535170":button1Color+=""}} class="scrollbar rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px] h-[35vh] overflow-auto" onclick={function(){checkAnswer(button1,1)}}>{button1}</button>
+            onfocus={function(){
+                button1Color.includes("background-color:#535170")?button1Color="background-color:#494763":button1Color+=""
+            }}  onmouseleave={function(){button1Color.includes("background-color:#494763")?button1Color="background-color:#535170":button1Color+=""}} class="scrollbar rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px] h-[33vh] overflow-auto" onclick={function(){checkAnswer(button1,1)}}>{button1}</button>
 
             <button style={button2Color} onmouseover={function(){
                 button2Color.includes("background-color:#535170")?button2Color="background-color:#494763":button2Color+=""
             }} 
-            onfocus={function(){button2Color="background-color:#494763"}} onmouseleave={function(){button1Color.includes("background-color:#494763")?button2Color="background-color:#535170":button2Color+=""}} class="scrollbar rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px] h-[35vh] overflow-auto" onclick={function(){checkAnswer(button2,2)}}>{button2}</button>
+            onfocus={function(){
+                button2Color.includes("background-color:#535170")?button2Color="background-color:#494763":button2Color+=""
+            }} onmouseleave={function(){button2Color.includes("background-color:#494763")?button2Color="background-color:#535170":button2Color+=""}} class="scrollbar rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px] h-[33vh] overflow-auto" onclick={function(){checkAnswer(button2,2)}}>{button2}</button>
 
             <button style={button3Color} onmouseover={function(){
                 button3Color.includes("background-color:#535170")?button3Color="background-color:#494763":button3Color+=""
             }} 
-            onfocus={function(){button3Color="background-color:#494763"}} onmouseleave={function(){button3Color.includes("background-color:#494763")?button3Color="background-color:#535170":button3Color+=""}} class="scrollbar rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px] h-[35vh] overflow-auto" onclick={function(){checkAnswer(button3,3)}}>{button3}</button>
+            onfocus={function(){
+                button3Color.includes("background-color:#535170")?button3Color="background-color:#494763":button3Color+=""
+            }} onmouseleave={function(){button3Color.includes("background-color:#494763")?button3Color="background-color:#535170":button3Color+=""}} class="scrollbar rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px] h-[33vh] overflow-auto" onclick={function(){checkAnswer(button3,3)}}>{button3}</button>
         </div>
     </div>
 
@@ -1120,7 +1139,7 @@
     <div class="w-[80%] h-[95vh] m-auto bg-[#767493] rounded-[20px] box-border p-[15px] overflow-auto" style={resultsDiv}> <!--results-->
         <button class="block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" style={buttonShowMissing} onclick={seeCorrectPlacements}>see correct placements</button>
         <button class="block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" style={buttonShowIncorrect} onclick={hideCorrectPlacements}>see incorrect answers</button>
-        <button class="mt-[5px] block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" onclick={showSettings}>return home</button>
+        <button class="mt-[5px] block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" onclick={endPractice}>return home</button>
         <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[95%] box-border p-[10px]">
             {#each includedEvents as period,i}
                 <ResultPeriod bind:this={resultsPeriods[i]} periodName={period} correctEvents={[]} incorrectEvents={[]} allInPeriod={events[period]}></ResultPeriod>
