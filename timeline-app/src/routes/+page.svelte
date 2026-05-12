@@ -718,18 +718,19 @@
     let clickable=$state(true);
 
     function startPractice(){
+        settingsDiv="display:none";
+        for(let i of includedEvents){
+            for(let j of events[i]){
+                unusedTerms.push(j);
+            }
+        }
         if(type!="learn"){
             practiceDiv="display:block";
-            settingsDiv="display:none";
-            for(let i of includedEvents){
-                for(let j of events[i]){
-                    unusedTerms.push(j);
-                }
-            }
-
             practice("");
         }else{
-            alert("Pls do practice..this feature will be implemented soon..ok? ok");
+            /*learnDiv="display:block";
+            learn();*/
+            alert("in progress..");
         }
     }
     
@@ -803,6 +804,7 @@
         buttonShowIncorrect="display:none";
     }
 
+    let termToLearn:string=$state("");
     function showSettings(){
         settingsDiv="display:block";
         resultsDiv="display:none";
@@ -814,6 +816,56 @@
         unusedTerms = [];
         chosenEvent = "";
         resultsBtn="display:none";
+    }
+
+    let button0:string=$state("");
+    let button1:string=$state("");
+    let button2:string=$state("");
+    let button3:string=$state("");
+
+    function learn(){
+        unusedTerms.length==0?termToLearn="":termToLearn=unusedTerms[Math.floor(Math.random()*unusedTerms.length)];
+        let correctNum:number = Math.floor(Math.random()*4);
+        let wrong1:number = selectWrongNum([unusedTerms.indexOf(termToLearn)]);
+        let wrong2:number = selectWrongNum([unusedTerms.indexOf(termToLearn), wrong1]);
+        let wrong3:number = selectWrongNum([unusedTerms.indexOf(termToLearn), wrong1, wrong2]);
+
+        if(correctNum==0){
+            button0=eventsInformation[termToLearn].desc;
+            button1=eventsInformation[unusedTerms[wrong1]].desc;
+            button2=eventsInformation[unusedTerms[wrong2]].desc;
+            button3=eventsInformation[unusedTerms[wrong3]].desc;
+        }else if(correctNum==1){
+            button1=eventsInformation[termToLearn].desc;
+            button0=eventsInformation[unusedTerms[wrong1]].desc;
+            button2=eventsInformation[unusedTerms[wrong2]].desc;
+            button3=eventsInformation[unusedTerms[wrong3]].desc;
+        }else if(correctNum==2){
+            button2=eventsInformation[termToLearn].desc;
+            button1=eventsInformation[unusedTerms[wrong1]].desc;
+            button0=eventsInformation[unusedTerms[wrong2]].desc;
+            button3=eventsInformation[unusedTerms[wrong3]].desc;
+        }else{
+            button3=eventsInformation[termToLearn].desc;
+            button1=eventsInformation[unusedTerms[wrong1]].desc;
+            button2=eventsInformation[unusedTerms[wrong2]].desc;
+            button0=eventsInformation[unusedTerms[wrong3]].desc;
+        }
+    }
+
+    function selectWrongNum(numsToAvoid:number[]):number{
+        let isReturnable = true;
+        let toReturn:number=-1;
+        while(!isReturnable || toReturn==-1){
+            isReturnable=true;
+            toReturn = Math.floor(Math.random()*unusedTerms.length);
+            for(let i of numsToAvoid){
+                if(i==toReturn){
+                    isReturnable=false;
+                }
+            }
+        }
+        return toReturn;
     }
 </script>
 
@@ -827,7 +879,7 @@
             <br>
             <div class="w-[60%] m-auto flex justify-around">
                 <div>
-                    <input class="accent-[#49437a]" type="radio" name="practice-type" value="learn" id="learn" bind:group={type} onchange={function(){alert("learn is under construction rn :p pls hold")}}>
+                    <input class="accent-[#49437a]" type="radio" name="practice-type" value="learn" id="learn" bind:group={type}>
                     <label for="learn" class="text-[#E7E7FB] text-[15px] kaisei-tokumin-regular">learn</label>
                 </div>
                 <div>
@@ -961,6 +1013,18 @@
             <button class="block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" onclick={startPractice}>Go!</button>
         </div>
         <br>
+    </div>
+
+    <div class="w-[80%] h-[95vh] m-auto bg-[#767493] rounded-[20px] box-border p-[15px] overflow-auto" style={learnDiv}>
+        <div class="h-[35%] flex items-center justify-center">
+            <h3 class="text-white istok-web-bold text-[20px]">{termToLearn}</h3>
+        </div>
+        <div class="grid grid-cols-2 gap-[20px] h-[65%]">
+            <button class="bg-[#535170] hover:bg-[#494763] rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px]">{button0}</button>
+            <button class="bg-[#535170] hover:bg-[#494763] rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px]">{button1}</button>
+            <button class="bg-[#535170] hover:bg-[#494763] rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px]">{button2}</button>
+            <button class="bg-[#535170] hover:bg-[#494763] rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px]">{button3}</button>
+        </div>
     </div>
 
     <div class="w-[80%] h-[95vh] m-auto bg-[#767493] rounded-[20px] box-border p-[15px] overflow-auto" style={practiceDiv}> <!--events classification-->
