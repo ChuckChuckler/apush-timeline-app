@@ -718,19 +718,22 @@
     let clickable=$state(true);
 
     function startPractice(){
-        settingsDiv="display:none";
         for(let i of includedEvents){
             for(let j of events[i]){
                 unusedTerms.push(j);
             }
         }
+        console.log(unusedTerms.length);
         if(type!="learn"){
+        //if(false){
             practiceDiv="display:block";
+            settingsDiv="display:none";
             practice("");
         }else{
             /*learnDiv="display:block";
-            learn();*/
-            alert("in progress..");
+            learn();
+            settingsDiv="display:none";*/
+            alert("in progress");
         }
     }
     
@@ -823,9 +826,18 @@
     let button2:string=$state("");
     let button3:string=$state("");
 
+    let correctNum:number=-1;
+
+    let button0Color:string=$state("background-color:#535170");
+    let button1Color:string=$state("background-color:#535170");
+    let button2Color:string=$state("background-color:#535170");
+    let button3Color:string=$state("background-color:#535170");
+
+    let ansSelected:boolean=false;
+
     function learn(){
         unusedTerms.length==0?termToLearn="":termToLearn=unusedTerms[Math.floor(Math.random()*unusedTerms.length)];
-        let correctNum:number = Math.floor(Math.random()*4);
+        correctNum = Math.floor(Math.random()*4);
         let wrong1:number = selectWrongNum([unusedTerms.indexOf(termToLearn)]);
         let wrong2:number = selectWrongNum([unusedTerms.indexOf(termToLearn), wrong1]);
         let wrong3:number = selectWrongNum([unusedTerms.indexOf(termToLearn), wrong1, wrong2]);
@@ -863,9 +875,39 @@
                 if(i==toReturn){
                     isReturnable=false;
                 }
+                console.log(eventsInformation[unusedTerms[toReturn]].desc);
+                if(eventsInformation[unusedTerms[toReturn]].desc==""){
+                    isReturnable=false;
+                }
             }
         }
         return toReturn;
+    }
+
+    function checkAnswer(selected:string, buttonFrom:number){
+        if(!ansSelected){
+            if(buttonFrom==0){
+                button0Color="background-color:#804D4D";
+            }else if(buttonFrom==1){
+                button1Color="background-color:#804D4D";
+            }else if(buttonFrom==2){
+                button2Color="background-color:#804D4D";
+            }else{
+                button3Color="background-color:#804D4D";
+            }
+        
+            if(correctNum==0){
+                button0Color="background-color:#51705D";
+            }else if(correctNum==1){
+                button1Color="background-color:#51705D";
+            }else if(correctNum==2){
+                button2Color="background-color:#51705D";
+            }else{
+                button3Color="background-color:#51705D";
+            }
+
+            ansSelected=true;
+        }
     }
 </script>
 
@@ -1016,14 +1058,29 @@
     </div>
 
     <div class="w-[80%] h-[95vh] m-auto bg-[#767493] rounded-[20px] box-border p-[15px] overflow-auto" style={learnDiv}>
-        <div class="h-[35%] flex items-center justify-center">
+        <div class="h-[15%] flex items-center justify-center">
             <h3 class="text-white istok-web-bold text-[20px]">{termToLearn}</h3>
         </div>
-        <div class="grid grid-cols-2 gap-[20px] h-[65%]">
-            <button class="bg-[#535170] hover:bg-[#494763] rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px]">{button0}</button>
-            <button class="bg-[#535170] hover:bg-[#494763] rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px]">{button1}</button>
-            <button class="bg-[#535170] hover:bg-[#494763] rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px]">{button2}</button>
-            <button class="bg-[#535170] hover:bg-[#494763] rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px]">{button3}</button>
+        <div class="grid grid-cols-2 gap-[20px] h-[75%]">
+            <button style={button0Color} onmouseover={function(){
+                button0Color.includes("background-color:#535170")?button0Color="background-color:#494763":button0Color+=""
+            }} 
+            onfocus={function(){button0Color="background-color:#494763"}} onmouseleave={function(){button0Color.includes("background-color:#494763")?button0Color="background-color:#535170":button0Color+=""}} class="scrollbar rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px] h-[35vh] overflow-auto" onclick={function(){checkAnswer(button0,0)}}>{button0}</button>
+            
+            <button style={button1Color} onmouseover={function(){
+                button1Color.includes("background-color:#535170")?button1Color="background-color:#494763":button1Color+=""
+            }} 
+            onfocus={function(){button1Color="background-color:#494763"}} onmouseleave={function(){button1Color.includes("background-color:#494763")?button1Color="background-color:#535170":button1Color+=""}} class="scrollbar rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px] h-[35vh] overflow-auto" onclick={function(){checkAnswer(button1,1)}}>{button1}</button>
+
+            <button style={button2Color} onmouseover={function(){
+                button2Color.includes("background-color:#535170")?button2Color="background-color:#494763":button2Color+=""
+            }} 
+            onfocus={function(){button2Color="background-color:#494763"}} onmouseleave={function(){button1Color.includes("background-color:#494763")?button2Color="background-color:#535170":button2Color+=""}} class="scrollbar rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px] h-[35vh] overflow-auto" onclick={function(){checkAnswer(button2,2)}}>{button2}</button>
+
+            <button style={button3Color} onmouseover={function(){
+                button3Color.includes("background-color:#535170")?button3Color="background-color:#494763":button3Color+=""
+            }} 
+            onfocus={function(){button3Color="background-color:#494763"}} onmouseleave={function(){button3Color.includes("background-color:#494763")?button3Color="background-color:#535170":button3Color+=""}} class="scrollbar rounded-[12.5px] box-border p-[10px] text-[#E7E7FB] istok-web text-[18px] h-[35vh] overflow-auto" onclick={function(){checkAnswer(button3,3)}}>{button3}</button>
         </div>
     </div>
 
@@ -1084,5 +1141,9 @@
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
+    }
+
+    .scrollbar{
+        scrollbar-width: thin;
     }
 </style>
