@@ -724,16 +724,16 @@
             }
         }
         console.log(unusedTerms.length);
-        if(type!="learn"){
-        //if(false){
+        //if(type!="learn"){
+        if(false){
             practiceDiv="display:block";
             settingsDiv="display:none";
             practice("");
         }else{
-            /*learnDiv="display:block";
+            learnDiv="display:block";
             learn();
-            settingsDiv="display:none";*/
-            alert("in progress");
+            settingsDiv="display:none";
+            //alert("in progress");
         }
     }
     
@@ -836,7 +836,17 @@
     let ansSelected:boolean=false;
 
     function learn(){
-        unusedTerms.length==0?termToLearn="":termToLearn=unusedTerms[Math.floor(Math.random()*unusedTerms.length)];
+        ansSelected=false;
+
+        button0Color="background-color:#535170";
+        button1Color="background-color:#535170";
+        button2Color="background-color:#535170";
+        button3Color="background-color:#535170";
+
+        termToLearn=unusedTerms[Math.floor(Math.random()*unusedTerms.length)];
+        while(eventsInformation[termToLearn].desc==""){
+            termToLearn=unusedTerms[Math.floor(Math.random()*unusedTerms.length)];
+        }
         correctNum = Math.floor(Math.random()*4);
         let wrong1:number = selectWrongNum([unusedTerms.indexOf(termToLearn)]);
         let wrong2:number = selectWrongNum([unusedTerms.indexOf(termToLearn), wrong1]);
@@ -884,29 +894,39 @@
         return toReturn;
     }
 
+    let nextButton=$state("opacity:0");
+
+    let totalAnswered:number=0;
+    let correct:number=0;
+
     function checkAnswer(selected:string, buttonFrom:number){
+        totalAnswered++;
+        if(selected==eventsInformation[termToLearn].desc){
+            correct++;
+        }
         if(!ansSelected){
             if(buttonFrom==0){
-                button0Color="background-color:#804D4D";
+                button0Color="background-color:#804D4D;border:1.5px #FF9191 solid";
             }else if(buttonFrom==1){
-                button1Color="background-color:#804D4D";
+                button1Color="background-color:#804D4D;border:1.5px #FF9191 solid";
             }else if(buttonFrom==2){
-                button2Color="background-color:#804D4D";
+                button2Color="background-color:#804D4D;border:1.5px #FF9191 solid";
             }else{
-                button3Color="background-color:#804D4D";
+                button3Color="background-color:#804D4D;border:1.5px #FF9191 solid";
             }
         
             if(correctNum==0){
-                button0Color="background-color:#51705D";
+                button0Color="background-color:#51705D;border:1.5px #91FF98 solid";
             }else if(correctNum==1){
-                button1Color="background-color:#51705D";
+                button1Color="background-color:#51705D;border:1.5px #91FF98 solid";
             }else if(correctNum==2){
-                button2Color="background-color:#51705D";
+                button2Color="background-color:#51705D;border:1.5px #91FF98 solid";
             }else{
-                button3Color="background-color:#51705D";
+                button3Color="background-color:#51705D;border:1.5px #91FF98 solid";
             }
 
             ansSelected=true;
+            nextButton = "opacity:1";
         }
     }
 </script>
@@ -1059,7 +1079,10 @@
 
     <div class="w-[80%] h-[95vh] m-auto bg-[#767493] rounded-[20px] box-border p-[15px] overflow-auto" style={learnDiv}>
         <div class="h-[15%] flex items-center justify-center">
-            <h3 class="text-white istok-web-bold text-[20px]">{termToLearn}</h3>
+            <div class="text-center">
+                <h3 class="text-white istok-web-bold text-[20px]">{termToLearn}</h3>
+                <button onclick={learn} style={nextButton} class="text-white istok-web-bold m-auto block underline">next</button>
+            </div>
         </div>
         <div class="grid grid-cols-2 gap-[20px] h-[75%]">
             <button style={button0Color} onmouseover={function(){
