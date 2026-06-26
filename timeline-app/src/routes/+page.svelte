@@ -633,6 +633,58 @@
         "Reconstruction ends (Rutherford B. Hayes)":{
             reasonForDecade:"Reconstruction lasted a decade. It started at the end of the Civil War and ended in 1877 with the election of Rutherford B. Hayes.",
             desc:"The Compromise of 1877 was the main event that led to this. The terms of the compromise included withdrawing Union soldiers from the South in exchange for the presidental victory going to Rutherford B. Hayes, the Republican candidate."
+        },
+        "First references to Social Darwinism":{
+            reasonForDecade:"The Gilded Age began in the 1870s. The mentality of those who profitted kind of intensified as time went on. This was in the 1880s.",
+            desc:"The rich and wealthy during the Gilded Age used this to justify the rich getting richer and the poor getting poorer."
+        },
+        "Jane Addams founds Hull House":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Andrew Carnegie's \"Gospel of Wealth\"":{
+            reasonForDecade:"The Gilded Age began in the 1870s. The mentality of those who profitted kind of intensified as time went on. This was in the 1880s.",
+            desc:"This publication argued that the wealthy had the responsibility of using their money for public good-- like building schools and libraries for public use."
+        },
+        "Progressive Era begins":{
+            reasonForDecade:"The Gilded Age, which started in the 1870s and continued to grow in the 1880s, kickstarted the Progressive Era into action.",
+            desc:"This was a period of social, economic, and political reform. Key movements included women's suffrage, civil rights, and labor reforms."
+        },
+        "Wounded Knee Massacre":{
+            reasonForDecade:"",
+            desc:"One of the last military actions against Natives. US soldiers opened fire on a band of Latoka people, killing what is estimated to be 150-300 people.",
+        },
+        "Changes in immigration patterns":{
+            reasonForDecade:"",
+            desc:"Beginning in the 1890s, immigration from Europe shifted from North and West (e.g. England, Germany) to South and East (e.g. Italy)."
+        },
+        "Census Bureau declares frontier closed":{
+            reasonForDecade:"American imperalism was beginning to rise in the 1890s. The frontier closing was one of the contributors-- with no new territory in the US, focus shifted to international territory.",
+            desc:""
+        },
+        "People's Party (Populist Party) founded":{
+            reasonForDecade:"The emergence of the Populist Party can be tied to the emergence of the Progressive Era.",
+            desc:"This group was a coalition of farmers, laborers, and activists. Their platform focused heavily on reform, especially economic reform."
+        },
+        "Carnegie Steel founded":{
+            reasonForDecade:"",
+            desc:"A massive corporation with a monopoly over steelmaking. This company made its founder one of the richest names in the US."
+        },
+        "Imperial Japan emerges":{
+            reasonForDecade:"American imperalism was also rising at this time. The rise of imperial Japan influenced imperialism in America.",
+            desc:""
+        },
+        "Plessy v. Ferguson":{
+            reasonForDecade:"",
+            desc:"A landmark Supreme Court case upholding the constitutionality of segregation."
+        },
+        "Spanish-American War":{
+            reasonForDecade:"The Spanish-American contributed greatly to US imperalism, which was already rising in the 1890s. By winning the war, the US directly gained new territories.",
+            desc:"Cuban nationalists revolted against the Spanish empire. Yellow journalism skewed public favor towards Cuba. That, combined with the sinking of the USS Maine and interest in territories, caused this."
+        },
+        "Philippine-American War":{
+            reasonForDecade:"The US had gained the Philippines in the Spanish-American war, which was fought in 1890s-- American imperalism was greatly on the rise; the US wanted the Philippines.",
+            desc:"Philippine nationalists had already declared independence from Spanish rule prior to the Spanish-American war. The US did not recognize the Philippines as an independent nation, starting this conflict."
         }
     }
     let learnDiv:string=$state("display:none");
