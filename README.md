@@ -34,8 +34,11 @@ This web app works best on Chrome. It's a little funky on Firefox-- it still wor
 Open your terminal and navigate to where you'd like to save the repo.
 
 ```git clone "https://github.com/ChuckChuckler/apush-timeline-app"```
+
 ```cd apush-timeline-app```
+
 ```cd timeline-app```
+
 ```npm install```
 
 Wait for installation, then run ```npm run dev``` and navigate to the given localhost
