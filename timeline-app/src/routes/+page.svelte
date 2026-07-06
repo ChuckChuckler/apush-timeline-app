@@ -685,6 +685,46 @@
         "Philippine-American War":{
             reasonForDecade:"The US had gained the Philippines in the Spanish-American war, which was fought in 1890s-- American imperalism was greatly on the rise; the US wanted the Philippines.",
             desc:"Philippine nationalists had already declared independence from Spanish rule prior to the Spanish-American war. The US did not recognize the Philippines as an independent nation, starting this conflict."
+        },
+        "McKinley assassinated":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Teddy Roosevelt becomes president":{
+            reasonForDecade:"I suppose you can think of Teddy Roosevelt as the president who really started the 20th century (not the assassinated one).",
+            desc:"This president was known for his \"big stick\" foreign policy. He cracked down on trusts and amplified conservation efforts."
+        },
+        "Great Migration begins":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Woodrow Wilson elected":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Panama Canal completed":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "WWI":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "US enters WWI":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Russian Revolution":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Red Scare":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Red Summer":{
+            reasonForDecade:"",
+            desc:""
         }
     }
     let learnDiv:string=$state("display:none");
@@ -712,6 +752,8 @@
     let checkAll1900s:boolean=$state(false);
     let check2000s:boolean=$state(false);
 
+    let any1900schecked:boolean=false;
+
     function checkAll(century:string, checked:boolean){
         let century1600:string[] = ["First half of 1600s", "Second half of 1600s"];
         let century1700:string[] = ["1700-60", "1760-69", "1770-79", "1780-89", "1790-99"];
@@ -731,7 +773,13 @@
             checked?checkAll1800s=true:checkAll1800s=false;
         }else if(century=="1900s"){
             chosenCentury=century1900;
-            checked?checkAll1900s=true:checkAll1900s=false;
+            if(checked){
+                checkAll1900s=true;
+                any1900schecked=true;
+            }else{
+                checkAll1900s=false;
+                any1900schecked=false;
+            }
         }
 
         if(checked){
@@ -770,20 +818,24 @@
     let clickable=$state(true);
 
     function startPractice(){
-        for(let i of includedEvents){
-            for(let j of events[i]){
-                unusedTerms.push(j);
+        if(any1900schecked && type=="learn"){
+            alert("1900s haven't been finished in learn mode yet!! Please deselect all 1900s events...sorry...")
+        }else if(includedEvents.length>0){
+            for(let i of includedEvents){
+                for(let j of events[i]){
+                    unusedTerms.push(j);
+                }
             }
-        }
-        console.log(unusedTerms.length);
-        if(type!="learn"){
-            practiceDiv="display:block";
-            settingsDiv="display:none";
-            practice("");
-        }else{
-            learnDiv="display:block";
-            learn();
-            settingsDiv="display:none";
+            console.log(unusedTerms.length);
+            if(type!="learn"){
+                practiceDiv="display:block";
+                settingsDiv="display:none";
+                practice("");
+            }else{
+                learnDiv="display:block";
+                learn();
+                settingsDiv="display:none";
+            }
         }
     }
     
@@ -991,7 +1043,7 @@
 <div class="bg-[#3C3B4B] h-[100vh] overflow-auto box-border p-[15px]">
     <div class="m-auto" style={settingsDiv}> <!--settings-->
         <h1 class="text-center text-[#E4E4FF] istok-web-bold text text-[25px]">APUSH Timeline Practice App</h1>
-        <h3 class="text-center text-white kaisei-tokumin-regular">pre 1600s-2008</h3>
+        <h3 class="text-center text-white kaisei-tokumin-regular">pre 1600s-1999</h3>
         <br>
         <div class="bg-[#616077] rounded-[20px] pt-[15px] pb-[20px] w-[50%] m-auto">
             <h3 class="text-center text-white kaisei-tokumin-regular">practice type</h3>
@@ -1092,42 +1144,74 @@
                 <label for="1900s" class="arimo text-white text-[18px]">1900s</label>
                 <button class="text-[12px] box-border p-[5px] text-white" onclick={function(){display1900s=="display:none"?display1900s="display:block":display1900s="display:none"}}>expand/close</button>
                 <div class="bg-[#908EAC] w-[40%] rounded-[15px] box-border p-[15px]" style={display1900s}>
-                    <input class="accent-[#49437a]" type="checkbox" name="1900-09" id="1900-09" value="1900-09" checked={checkAll1900s} onchange={function(){include("1900-09", this.checked==undefined?false:this.checked)}}>
+                    <input class="accent-[#49437a]" type="checkbox" name="1900-09" id="1900-09" value="1900-09" checked={checkAll1900s} onchange={function(){
+                        include("1900-09", this.checked==undefined?false:this.checked);
+                        if(this.checked) any1900schecked=true;
+                    }}>
                     <label class="arimo-thin text-white text-[16px]" for="1900-09">1900-09</label>
                     <br>
-                    <input class="accent-[#49437a]" type="checkbox" name="1910-19" id="1910-19" value="1910-19" checked={checkAll1900s} onchange={function(){include("1910-19", this.checked==undefined?false:this.checked)}}>
+                    <input class="accent-[#49437a]" type="checkbox" name="1910-19" id="1910-19" value="1910-19" checked={checkAll1900s} onchange={function(){
+                        include("1910-19", this.checked==undefined?false:this.checked);
+                        if(this.checked) any1900schecked=true;
+                    }}>
                     <label class="arimo-thin text-white text-[16px]" for="1910-19">1910-19</label>
                     <br>
-                    <input class="accent-[#49437a]" type="checkbox" name="1920-29" id="1920-29" value="1920-29" checked={checkAll1900s} onchange={function(){include("1920-29", this.checked==undefined?false:this.checked)}}>
+                    <input class="accent-[#49437a]" type="checkbox" name="1920-29" id="1920-29" value="1920-29" checked={checkAll1900s} onchange={function(){
+                        include("1920-29", this.checked==undefined?false:this.checked);
+                        if(this.checked) any1900schecked=true;
+                    }}>
                     <label class="arimo-thin text-white text-[16px]" for="1920-29">1920-29</label>
                     <br>
-                    <input class="accent-[#49437a]" type="checkbox" name="1930-39" id="1930-39" value="1930-39" checked={checkAll1900s} onchange={function(){include("1930-39", this.checked==undefined?false:this.checked)}}>
+                    <input class="accent-[#49437a]" type="checkbox" name="1930-39" id="1930-39" value="1930-39" checked={checkAll1900s} onchange={function(){
+                        include("1930-39", this.checked==undefined?false:this.checked);
+                        if(this.checked) any1900schecked=true;
+                    }}>
                     <label class="arimo-thin text-white text-[16px]" for="1930-09">1930-39</label>
                     <br>
-                    <input class="accent-[#49437a]" type="checkbox" name="1940-49" id="1940-49" value="1940-49" checked={checkAll1900s} onchange={function(){include("1940-49", this.checked==undefined?false:this.checked)}}>
+                    <input class="accent-[#49437a]" type="checkbox" name="1940-49" id="1940-49" value="1940-49" checked={checkAll1900s} onchange={function(){
+                        include("1940-49", this.checked==undefined?false:this.checked)
+                        if(this.checked) any1900schecked=true
+                    }}>
                     <label class="arimo-thin text-white text-[16px]" for="1940-49">1940-49</label>
                     <br>
-                    <input class="accent-[#49437a]" type="checkbox" name="1950-59" id="1950-59" value="1950-59" checked={checkAll1900s} onchange={function(){include("1950-59", this.checked==undefined?false:this.checked)}}>
+                    <input class="accent-[#49437a]" type="checkbox" name="1950-59" id="1950-59" value="1950-59" checked={checkAll1900s} onchange={function(){
+                        include("1950-59", this.checked==undefined?false:this.checked);
+                        if(this.checked) any1900schecked=true;
+                    }}>
                     <label class="arimo-thin text-white text-[16px]" for="1950-59">1950-59</label>
                     <br>
-                    <input class="accent-[#49437a]" type="checkbox" name="1960-69" id="1960-69" value="1960-69" checked={checkAll1900s} onchange={function(){include("1960-69", this.checked==undefined?false:this.checked)}}>
+                    <input class="accent-[#49437a]" type="checkbox" name="1960-69" id="1960-69" value="1960-69" checked={checkAll1900s} onchange={
+                        function(){include("1960-69", this.checked==undefined?false:this.checked);
+                        if(this.checked) any1900schecked=true;
+                    }}>
                     <label class="arimo-thin text-white text-[16px]" for="1960-69">1960-69</label>
                     <br>
-                    <input class="accent-[#49437a]" type="checkbox" name="1970-79" id="1970-79" value="1970-79" checked={checkAll1900s} onchange={function(){include("1970-79", this.checked==undefined?false:this.checked)}}>
+                    <input class="accent-[#49437a]" type="checkbox" name="1970-79" id="1970-79" value="1970-79" checked={checkAll1900s} onchange={
+                        function(){include("1970-79", this.checked==undefined?false:this.checked);
+                        if(this.checked) any1900schecked=true;
+                    }}>
                     <label class="arimo-thin text-white text-[16px]" for="1970-79">1970-79</label>
                     <br>
-                    <input class="accent-[#49437a]" type="checkbox" name="1980-89" id="1980-89" value="1980-89" checked={checkAll1900s} onchange={function(){include("1980-89", this.checked==undefined?false:this.checked)}}>
+                    <input class="accent-[#49437a]" type="checkbox" name="1980-89" id="1980-89" value="1980-89" checked={checkAll1900s} onchange={
+                        function(){include("1980-89", this.checked==undefined?false:this.checked);
+                        if(this.checked) any1900schecked=true;
+                    }}>
                     <label class="arimo-thin text-white text-[16px]" for="1980-89">1980-89</label>
                     <br>
-                    <input class="accent-[#49437a]" type="checkbox" name="1990-99" id="1990-99" value="1990-99" checked={checkAll1900s} onchange={function(){include("1990-99", this.checked==undefined?false:this.checked)}}>
+                    <input class="accent-[#49437a]" type="checkbox" name="1990-99" id="1990-99" value="1990-99" checked={checkAll1900s} onchange={
+                        function(){include("1990-99", this.checked==undefined?false:this.checked);
+                        if(this.checked) any1900schecked=true;
+                    }}>
                     <label class="arimo-thin text-white text-[16px]" for="1990-99">1900-09</label>
                 </div>
                 <br>
                 <br>
 
-                <input bind:checked={check2000s} class="accent-[#49437a]" type="checkbox" name="2000-" id="2000-" value="2000-" onchange={function(){include("2000-", this.checked==undefined?false:this.checked)}}>
-                <label for="2000-" class="arimo text-white text-[18px]">2000-</label>
-                <br>
+                <div class="hidden">
+                    <input bind:checked={check2000s} class="accent-[#49437a]" type="checkbox" name="2000-" id="2000-" value="2000-" onchange={function(){include("2000-", this.checked==undefined?false:this.checked)}}>
+                    <label for="2000-" class="arimo text-white text-[18px]">2000-</label>
+                    <br>
+                </div>
             </div>
             <button class="block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" onclick={startPractice}>Go!</button>
         </div>
