@@ -190,7 +190,7 @@
             "Truman becomes president",
             "VE Day",
             "WWII ends",
-            "Hiroshima, Nagasaki",
+            "Bombings of Hiroshima, Nagasaki",
             "Decolonization of Asian/African countries begins",
             "Baby Boom begins",
             "Cold War begins",
@@ -767,20 +767,20 @@
             desc:""
         },
         "Pearl Harbor":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"WWII started in 1939. The US didn't join until the 1940s-- Pearl Harbor in 1941 was the reason the US joined. Most of the events of WWII also happened in this decade.",
+            desc:"The surprise bombing on the US Pacific Fleet. This event directly resulted in US involvement in WWII."
         },
         "Internment of Japanese Americans":{
-            reasonForDecade:"",
+            reasonForDecade:"The internment of Japanese Americans was a result of Pearl Harbor and its impacts on the views of American society. The attack only fueled racist anti-Asian sentiment.",
             desc:""
         },
         "Final Solution":{
-            reasonForDecade:"",
+            reasonForDecade:"Most events during WWII happened in the 1940s.",
             desc:""
         },
         "D-Day":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"Most events during WWII happened in the 1940s.",
+            desc:"This event made Germany's defeat during WWII inevitable."
         },
         "Death of FDR":{
             reasonForDecade:"",
@@ -791,51 +791,51 @@
             desc:""
         },
         "VE Day":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"This event marked the end of WWII in Europe. You can group all the WWII-related events together in the 1940s-- with exception of the start of the war, which was in 1939.",
+            desc:"This marked the end of WWII in Europe. The war as a whole did not officially end until later."
         },
         "WWII ends":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"This event marked the end of WWII as a whole. You can group all the WWII-related events following the start of the war together in the 1940s. Think 1939 --> WWII starts; 1940s --> WWII continues",
+            desc:"The formal surrender by Japan marked this."
         },
-        "Hiroshima, Nagasaki":{
-            reasonForDecade:"",
-            desc:""
+        "Bombings of Hiroshima, Nagasaki":{
+            reasonForDecade:"This event was part of WWII. Think 1939 --> WWII starts; 1940s --> WWII continues",
+            desc:"The US did this to force a Japanese surrender during WWII."
         },
         "Decolonization of Asian/African countries begins":{
-            reasonForDecade:"",
+            reasonForDecade:"The decolonization of colonized countries follows the end of WWII. Direct outcomes of WWII can be grouped, along with significant events, in the 1940s.",
             desc:""
         },
         "Baby Boom begins":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"The Baby Boom came from factors like economic prosperity that resulted from WWII. Direct outcomes of WWII can be grouped, along with significant events, in the 1940s.",
+            desc:"A large upsurge in births following WWII. Economic prosperity, the return of veterans and government bills supporting them, and advances in healthcare are some factors that contributed to this."
         },
         "Cold War begins":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"With the end of WWII, the US and the Soviet Union became the two dominant global superpowers, thus spurring the Cold War. Direct outcomes of WWII can be grouped, along with significant events, in the 1940s.",
+            desc:"The Soviet Union emerged as a global superpower following the end of WWII. Fundamental differences in ideology and politics between the USSR and the US caused this."
         },
         "HUAC increases investigations":{
-            reasonForDecade:"",
-            desc:"",
+            reasonForDecade:"This is when the HUAC's focus shifted from Nazism/fascism to communism. Fear of communism was amplified by the rise of the USSR and the Cold War.",
+            desc:"A huge rise in activity for this group, as well as a shift in focus, as Cold War tensions intensified.",
         },
         "Desegregation of Armed Forces":{
-            reasonForDecade:"",
+            reasonForDecade:"Direct outcomes of WWII can be grouped, along with significant events, in the 1940s.",
             desc:""
         },
         "Dixiecrats":{
             reasonForDecade:"",
-            desc:""
+            desc:"A faction of the Southern Democrats who opposed civil rights. Their emergence was significant in beginning the shift in Democratic and Republican ideologies."
         },
         "Founding of NATO":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"The reason for the founding of NATO is most commonly considered the threat of the Soviet Union. It may help to remember both the beginning of the Cold War and the founding of NATO to be in the same decade (1940s).",
+            desc:"An alliance of countries, including the US, which still exists today. It aimed to deter Soviet expansion, prevent nationalist militarism in Europe, and encourage political integration of Europe."
         },
         "People's Republic of China created":{
-            reasonForDecade:"",
+            reasonForDecade:"You can try to remember that the People's Republic of China was founded around the same time that the Cold War was gaining steam and the USSR was increasing in power. After all, the PRC and USSR formed an alliance very quickly.",
             desc:""
         },
         "USSR tests A-bomb":{
-            reasonForDecade:"",
+            reasonForDecade:"This happened in the same decade as the \"start\" of the Cold War. The Cold War included the arms race between the USSR and the US, and the testing of the A-bomb is a part of that.",
             desc:""
         }
     }
