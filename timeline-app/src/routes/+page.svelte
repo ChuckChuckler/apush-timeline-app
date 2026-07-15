@@ -178,7 +178,7 @@
             "FDR elected",
             "Hitler becomes chancellor of Germany",
             "New Deal",
-            "HUAC created",
+            "HUAC (House of Un-American Activites Committee) created",
             "WWII starts"
         ],
         "1940-49":[
@@ -725,6 +725,118 @@
         "Red Summer":{
             reasonForDecade:"This was a result of the Great Migration, which happened in this decade.",
             desc:"A large outbreak of racial violence over multiple cities. Angered by Black newcomers settling into their cities and fearing Black resistance to subjugation, white people attacked and terrorized African Americans."
+        },
+        "19th Amendment":{
+            reasonForDecade:"This was a development of the Roaring Twenties (a nickname for the 1920s), which included shifts in cultural/societal norms.",
+            desc:"The amendment granting women the right to vote."
+        },
+        "Roaring Twenties/Jazz Age":{
+            reasonForDecade:"Roaring Twenties = 1920s! It's in the name!!",
+            desc:"A decade characterized by economic prosperity, technological innovations, cultural developments, and societal change."
+        },
+        "Founding of USSR":{
+            reasonForDecade:"",
+            desc:"Established after the Russian Revolution."
+        },
+        "Immigration Act of 1924 (Johnsnon-Reed Act)":{
+            reasonForDecade:"It's in the name buddy",
+            desc:"The law which established immigration quotas as a permanent restriction."
+        },
+        "Great Depression begins":{
+            reasonForDecade:"",
+            desc:"One of the worst economic crises in the history of the US. It began with the Wall Street Crash of 1929. Unemployment was at an all-time high, businesses went bankrupt, and exponential deflation."
+        },
+        "FDR elected":{
+            reasonForDecade:"Remember that the Great Depression happened in the previous decade. A way you can remember it is that Great Depression in the 1920s --> New Deal to remedy it in the 1930s.",
+            desc:"This president was known best for his New Deal programs, which tremendously improved conditions during the Great Depression."
+        },
+        "Hitler becomes chancellor of Germany":{
+            reasonForDecade:"This is the same decade in which WWII starts.",
+            desc:""
+        },
+        "New Deal":{
+            reasonForDecade:"Remember that the Great Depression happened in the previous decade. A way you can remember it is that Great Depression in the 1920s --> New Deal to remedy it in the 1930s.",
+            desc:"A series of programs and reforms put in place by FDR to combat the Great Depression. It passed acts and created agencies focused on Relief, Recovery, and Reform-- the 'three Rs'. It will be very helpful to know at least two or three of these specific programs or acts."
+        },
+        "HUAC (House of Un-American Activites Committee) created":{
+            reasonForDecade:"Although its focus shifted to communism in later decades, the HUAC was originally CREATED to uncover fascism and Nazi sentiment, which-- with the rise of Hitler and the beginning of WWII-- was rapidly on the rise in the US.",
+            desc:"This was a government committee originally created to investigate fascist/Nazi groups. It is more commonly known, though, for its role during the Cold War."
+        },
+        "WWII starts:":{
+            reasonForDecade:"You can group together Hitler's rise to power, the creation of the HUAC, and the start of WWII in one decade. It is also helpful to know the dates of large and very important events, such as this one.",
+            desc:""
+        },
+        "Pearl Harbor":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Internment of Japanese Americans":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Final Solution":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "D-Day":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Death of FDR":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Truman becomes president":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "VE Day":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "WWII ends":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Hiroshima, Nagasaki":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Decolonization of Asian/African countries begins":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Baby Boom begins":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Cold War begins":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "HUAC increases investigations":{
+            reasonForDecade:"",
+            desc:"",
+        },
+        "Desegregation of Armed Forces":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Dixiecrats":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Founding of NATO":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "People's Republic of China created":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "USSR tests A-bomb":{
+            reasonForDecade:"",
+            desc:""
         }
     }
     let learnDiv:string=$state("display:none");
