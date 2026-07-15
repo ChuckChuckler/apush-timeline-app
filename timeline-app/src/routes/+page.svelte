@@ -696,35 +696,35 @@
         },
         "Great Migration begins":{
             reasonForDecade:"",
-            desc:""
+            desc:"A mass movement of African American people from the rural South to the urban North and Midwest. They sought better economic opportunities, more freedom, and escape from violence."
         },
         "Woodrow Wilson elected":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"Remember that Woodrow Wilson was president of the US through WWI! He was the one who created the 14 Points, including the League of Nations.",
+            desc:"This president was known for WWI, social and economic reform, and his 14 Points."
         },
         "Panama Canal completed":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"The Panama Canal was completed under Woodrow Wilson's presidency. I guess that's one way you can remember it.",
+            desc:"The US took over this in order to faciliate military movement, accelerate global trade, and demonstrate naval capability."
         },
         "WWI":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"You should probably know when WWI happened. It makes remembering other events much easier!!!",
+            desc:"This started with the assassination of Archduke Franz Ferdinand..."
         },
         "US enters WWI":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"You should probably know when WWI happened. It makes remembering other events much easier!!!",
+            desc:"There were a few reasons for this happening: unrestricted submarine warfare by Germany and the sinking of the Lusitania; political and economic ties to the Allied powers; and the Zimmerman Telegram."
         },
         "Russian Revolution":{
-            reasonForDecade:"",
+            reasonForDecade:"The Russian Revolution was largely influenced by the outcome of WW1, so it helps to remember them as being in the same decade.",
             desc:""
         },
         "Red Scare":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"The Red Scare resulted from fears about communism that rose because of the Russian Revolution. And the Russian Revolution was caused in part by WWI.",
+            desc:"A period of nationwide fear about far-left ideology and communism. Racism and hatred towards immigrants-- especially Russian and Italian immigrants-- was widespread during this period, and civil liberties/rights were very limited."
         },
         "Red Summer":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"This was a result of the Great Migration, which happened in this decade.",
+            desc:"A large outbreak of racial violence over multiple cities. Angered by Black newcomers settling into their cities and fearing Black resistance to subjugation, white people attacked and terrorized African Americans."
         }
     }
     let learnDiv:string=$state("display:none");
