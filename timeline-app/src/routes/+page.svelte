@@ -837,6 +837,170 @@
         "USSR tests A-bomb":{
             reasonForDecade:"This happened in the same decade as the \"start\" of the Cold War. The Cold War included the arms race between the USSR and the US, and the testing of the A-bomb is a part of that.",
             desc:""
+        },
+        "Korean War":{
+            reasonForDecade:"You can try to remember that the Korean War and the Vietnam War both started in the same decade.",
+            desc:"This conflict started when North Korean leader Kim Il invaded South Korea. North Korea wanted to unify the two under a communist regime; South Korea did not."
+        },
+        "Joseph McCarthy makes first accusations-- McCarthyism":{
+            reasonForDecade:"Cold War tensions grew, and fear of communism escalated over the coming years.",
+            desc:"This was an anticommunist campaign that (often baselessly) accused government officials and Hollywood employers, among others, of being communist sympathizers. The person who started this became a very powerful and feared figure."
+        },
+        "growth of the suburbs":{
+            reasonForDecade:"The American people were growing weary of the tension of the Cold War and fear of communism. The suburbs offered comfort and a sense of security in their uniformity and predictability.",
+            desc:"The American people were growing weary of the tension of the Cold War and fear of communism. These offered comfort and a sense of security in their uniformity and predictability."
+        },
+        "Immigration and Nationality Act":{
+            reasonForDecade:"",
+            desc:"This act ended Asian exclusion, updated the quota system, and enhanced security in the wake of the Cold War, among other things. It consolidated all existing immigration laws into one. "
+        },
+        "Brown v. Board of Education":{
+            reasonForDecade:"Most of the advancements in the Civil Rights happened in the 1960s. The movement itself started in the 1950s, so some events happened in this decade as well. You can consider them precursors to the more significant developments in the 1960s.",
+            desc:"This was a monumental Supreme Court case that ruled race-based discrimination in schools as unconstitutional."
+        },
+        "Civil Rights Movement starts":{
+            reasonForDecade:"",
+            desc:"A significant movement which campaigned for equal rights and the elimination of racism and discrimination."
+        },
+        "Murder of Emmett Till":{
+            reasonForDecade:"Most of the advancements in the Civil Rights happened in the 1960s. The movement itself started in the 1950s, so some events happened in this decade as well. You can consider them precursors to the more significant developments in the 1960s.",
+            desc:"This person was violently abducted and murdered for allegedly making moves on a white woman. He was a significant icon during the Civil Rights movement."
+        },
+        "Rosa Parks arrested":{
+            reasonForDecade:"Most of the advancements in the Civil Rights happened in the 1960s. The movement itself started in the 1950s, so some events happened in this decade as well. You can consider them precursors to the more significant developments in the 1960s.",
+            desc:"This person, most famously known for refusing to give up their seat on a bus, was a significant Civil Rights' activist."
+        },
+        "beginning of Montgomery Bus Boycott":{
+            reasonForDecade:"Most of the advancements in the Civil Rights happened in the 1960s. The movement itself started in the 1950s, so some events happened in this decade as well. You can consider them precursors to the more significant developments in the 1960s.",
+            desc:"This was a pivotal event during the Civil Rights movement against the racially segregated public transit in Montgomery, Alabama."
+        },
+        "Vietnam War starts":{
+            reasonForDecade:"You can try to remember that the Korean War and the Vietnam War both started in the same decade.",
+            desc:"After the Viet Minh, a nationalist communist organization, defeated the French and reclaimed Vietnam, Vietnam was split into North and South. The Viet Minh wished to unite both under a communist regime; thus, this began."
+        },
+        "JFK elected":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Formation of SNCC":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "FDA approves first birth control pill":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Freedom Riders":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Cuban Missile Crisis":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "JFK assassinated":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "LBJ becomes president":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "March on Washington":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Betty Friedan's \"The Feminine Mystique\"":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Freedom Summer":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Civil Rights Act":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Republican Party begins Southern Strategy":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Tonkin Gulf Resolution":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "LBJ begins Great Society program":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Immigration and Nationality Act of 1965":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Voting Rights Act":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Malcolm X assassinated":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Griswold v. Connecticut":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Riots over police brutality":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Chicano Movement begins":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Formation of Black Panthers":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Loving v. Virginia":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Women's Liberation Movement begins":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Asian American Movement begins":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "MLK assassinated":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Civil Rights Movement ends":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Bobby Kennedy assassinated":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Nixon elected":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "American Indian Movement begins":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Stonewall Uprising":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "countercultures, youth culture, and antiwar protests":{
+            reasonForDecade:"",
+            desc:""
         }
     }
     let learnDiv:string=$state("display:none");
