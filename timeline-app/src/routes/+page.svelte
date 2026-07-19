@@ -879,129 +879,129 @@
             desc:"After the Viet Minh, a nationalist communist organization, defeated the French and reclaimed Vietnam, Vietnam was split into North and South. The Viet Minh wished to unite both under a communist regime; thus, this began."
         },
         "JFK elected":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"JFK started the Civil Rights work that LBJ finished. He was elected in the same decade as LBJ, but his assassination brought LBJ's presidency early.",
+            desc:"This president was known for his youthfulness, his charisma, and the \"Camelot\" era he ushered in for the US."
         },
-        "Formation of SNCC":{
-            reasonForDecade:"",
-            desc:""
+        "Formation of the SNCC":{
+            reasonForDecade:"During the 1960s, most of the 1940s Baby Boom children grew to engage in counterculture and be vocal supporters of civil rights, nonviolence, and antiwar sentiment. You will see much student involvement in politics in the 1960s, and many movements in general.",
+            desc:"This committee, composed of college students and young adults, organized peaceful protests and were prominent during the Civil Rights movement."
         },
         "FDA approves first birth control pill":{
-            reasonForDecade:"",
+            reasonForDecade:"Along with the Civil Rights movement, many other movements were happening during the 1960s; women's rights was one such movement. By giving women control over their bodies, the approval of Enovid (the pill) was crucial for the women's rights movement.",
             desc:""
         },
         "Freedom Riders":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"Most of the Civil Rights movement's action happened in this decade. The freedom riders were important for addressing perpetuated segregation on public transit.",
+            desc:"This group rode buses in the segregated South to challenge the US non-enforcement policies, which failed to enforce anti-discriminatory laws in Southern states."
         },
         "Cuban Missile Crisis":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"This happened during JFK's presidency, and is something JFK is known well for.",
+            desc:"This was a 13-day confrontation between the US and the Soviet Union involving nuclear weapons. The US had placed missiles in England, Italy, and Turkey prior; the USSR responded by placing missiles in Cuba."
         },
         "JFK assassinated":{
-            reasonForDecade:"",
+            reasonForDecade:"Apparently all the Kennedys are dying during the 1960s?",
             desc:""
         },
         "LBJ becomes president":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"LBJ is credited with doing great things for the Civil Rights movement (Great Society), which was most active in the 1960s; he also took office after JFK's assassination.",
+            desc:"This president is known for his Great Society and his contributions to the Civil Rights movement."
         },
         "March on Washington":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"Most of the action during the Civil Rights movement happened in this decade. The March on Washington especially was monumental.",
+            desc:"This was a historic event where hundreds of thousands of people gathered in Washington D.C. to advocate for equal civil and economic rights. It is also where MLK Jr delivered his iconic \"I Have a Dream\" speech."
         },
         "Betty Friedan's \"The Feminine Mystique\"":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"Along with the Civil Rights movement, many other movements were happening during the 1960s; women's rights was one such movement.",
+            desc:"Controversial for its opinion on women's \"traditional role\", this publication was pivotal in the feminism movement. It challenged the belief that the role of women should be confined to the home and emphasized the dissatisfaction that comes from being confined to such a role."
         },
         "Freedom Summer":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"Most of the action during the Civil Rights movement happened in this decade.",
+            desc:"A campaign launched in Mississippi to register as many Black voters as possible and draw attention to the violence faced by African Americans in Mississippi."
         },
         "Civil Rights Act":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"The Civil Rights Act was signed into law by LBJ and was a significant achievement of the Civil Rights movement.",
+            desc:"This officially outlawed disenfranchisement, segregation, and discriminatory practices, and created the EEOC (Equal Employment Opportunity Commission)."
         },
         "Republican Party begins Southern Strategy":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"You can remember this as being in the same decade as LBJ and most of the Civil Rights movement (and other movements). After all, LBJ himself was a Democrat.",
+            desc:"The gradual shift in politics in the Democratic Party beginning from FDR's presidency was beginning to alienate Southern Democrats who still held the same beliefs as the old Democratic Party. The Republican Party realized this and used it to their advantage."
         },
         "Tonkin Gulf Resolution":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"The Tonkin Gulf Resolution was passed during LBJ's presidency. Although LBJ did great things for Civil Rights, his reputation is hampered by his handling of the Vietnam War.",
+            desc:"This authorized the president to take \"all necessary measures\" to retaliate against armed attacks against the US. It was used as the basis for escalation of the Vietnam War."
         },
         "LBJ begins Great Society program":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"The Great Society is one of the things LBJ is known most for, and can also be correlated with Civil Rights/other movements.",
+            desc:"A set of domestic programs and legislature intended to eliminate poverty and racial injustice-- these included Medicaid and Medicare, which are still around today."
         },
         "Immigration and Nationality Act of 1965":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"With the Civil Rights movement and other movements, many leaps were made in eradicating injustice during the 1960s. Also, it's in the name :p",
+            desc:"This abolished the immigrant quota system and created a preference system prioritizing family reunification."
         },
         "Voting Rights Act":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"The Voting Right Act was signed into law by LBJ and was an important achievement of the Civil Rights movement.",
+            desc:"This outlawed discriminatory practices at voting booths in the South, such as literary tests, and enforced the 15th Amendment."
         },
         "Malcolm X assassinated":{
-            reasonForDecade:"",
+            reasonForDecade:"Both Malcolm X and MLK Jr were assassinated in the 1960s. Malcolm X was assassinated during the Civil Rights movement.",
             desc:""
         },
         "Griswold v. Connecticut":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"Along with the Civil Rights movement, many other movements were happening during the 1960s; women's rights was one such movement. The ruling of the Griswold v. Connecticut case protected a woman's right to use contraceptives and have control over her own body.",
+            desc:"This was a landmark Supreme Court case protecting the right of married couples to use contraceptives and declared a certain law prohibiting it as unconstitutional."
         },
         "Riots over police brutality":{
-            reasonForDecade:"",
+            reasonForDecade:"The majority of action related to the Civil Rights movement happened in the 1960s.",
             desc:""
         },
         "Chicano Movement begins":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"Along with the Civil Rights movement, many other movements were happening during the 1960s, including the Chicano Movement.",
+            desc:"This was a social and political movement by Mexican Americans to reject assimilation, fight racism, and encourage the embracing of culture."
         },
         "Formation of Black Panthers":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"The majority of action related to the Civil Rights movement happened in the 1960s.",
+            desc:"This party advocated for the self-defense of Black people and fought against police brutality."
         },
         "Loving v. Virginia":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"The majority of action related to the Civil Rights movement happened in the 1960s.",
+            desc:"A landmark Supreme Court case which deemed bans on interracial marriage unconstitutional."
         },
         "Women's Liberation Movement begins":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"Along with the Civil Rights movement, many other movements were happening during the 1960s. Advocacy for women's rights was happening prior to this movement, including in this same decade.",
+            desc:"Inspired by Betty Friedan's \"The Feminine Mystique\", feminists argued for economic, social, and political equality, and argued against patriarchy."
         },
         "Asian American Movement begins":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"Many other movements were inspired by the Civil Rights movement and happened in the same decade as it.",
+            desc:"This was a social and political movement where Asian Americans promoted anti-war and anti-imperialism."
         },
         "MLK assassinated":{
-            reasonForDecade:"",
+            reasonForDecade:"Both Malcolm X and MLK Jr were assassinated in the 1960s. Malcolm X was assassinated during the Civil Rights movement.",
             desc:""
         },
         "Civil Rights Movement ends":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"The Civil Rights Movement ended in the same decade as it started, with the assassination of MLK Jr.",
+            desc:"This was the result of MLK Jr's assassination."
         },
         "Bobby Kennedy assassinated":{
-            reasonForDecade:"",
+            reasonForDecade:"Apparently all the Kennedys were assassinated in the 1960s?",
             desc:""
         },
         "Nixon elected":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"Nixon was elected in the late 1960s-- the scandals and most of the action he took during his presidency happened in the 1970s.",
+            desc:"This president was known for Watergate."
         },
         "American Indian Movement begins":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"Many other movements were inspired by the Civil Rights movement and happened in the same decade as it.",
+            desc:"This movement addressed injustice against American Indians-- like poverty and police brutality-- and issues stemming from colonial settlement-- such as unemployment and cultural preservation."
         },
         "Stonewall Uprising":{
-            reasonForDecade:"",
-            desc:""
+            reasonForDecade:"Many other movements were inspired by the Civil Rights movement and happened in the same decade as it.",
+            desc:"A series of demonstrations between LGBTQ+ protestors and the police. Although not the first example of LGBTQ+ retaliation against the police, it was one of the most influential and marked a new beginning for the LGBTQ+ movement."
         },
         "countercultures, youth culture, and antiwar protests":{
-            reasonForDecade:"",
+            reasonForDecade:"During the 1960s, most of the 1940s Baby Boom children grew to engage in counterculture and be vocal supporters of civil rights, nonviolence, and antiwar sentiment. You will see much student involvement in politics in the 1960s, and many movements in general (e.g. SNCC).",
             desc:""
-        }
+        },
     }
     let learnDiv:string=$state("display:none");
     let practiceDiv:string=$state("display:none");
