@@ -1050,7 +1050,18 @@
             reasonForDecade:"",
             desc:"As a response to the US granting asylum to the deposed Shah, 66 Americans were taken hostage at the US Embassy in Tehran. The last of the hostages left two years later in 1981."
         },
-
+        "Reagan elected":{
+            reasonForDecade:"Christian fundamentalism and traditional/conservative sentiment had been steadily rising since the 1960s and especially in the 1970s. Reagan was the first president to truly embody all of the principles of a conservative Republican. You can think start, 1960s --> growth, 1970s --> \"culmination\", 1980s.",
+            desc:"This president was known for his conservative Christian values, his economic policies, and his contributions to bringing about the end of the Cold War."
+        },
+        "Reaganomics":{
+            reasonForDecade:"\"Reagan\" is in the name, come on",
+            desc:"Reagan's economic policy involving supply-side economics, or trickle-down economics."
+        },
+        "AIDS epidemic":{
+            reasonForDecade:"Honestly the way I remember this one is just the fact that it's so funny that the AIDS epidemic happened under Reagen of all people",
+            desc:""
+        }
     }
     let learnDiv:string=$state("display:none");
     let practiceDiv:string=$state("display:none");
