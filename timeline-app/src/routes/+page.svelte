@@ -1002,6 +1002,55 @@
             reasonForDecade:"During the 1960s, most of the 1940s Baby Boom children grew to engage in counterculture and be vocal supporters of civil rights, nonviolence, and antiwar sentiment. You will see much student involvement in politics in the 1960s, and many movements in general (e.g. SNCC).",
             desc:""
         },
+        "First Earth Day":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "oil crisis; stagflation":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "US manufacturing begins to decline":{
+            reasonForDecade:"",
+            desc:""
+        },
+        "Rise of Christian fundamentalism":{
+            reasonForDecade:"This was a gradual result of progressivism and legislature that seemed to undermine Christian values.",
+            desc:"This was a gradual result of progressivism and legislature that seemed to undermine Christian values."
+        },
+        "Pentagon Papers":{
+            reasonForDecade:"Much corruption was exposed during Nixon's presidency (1970s). You can use that to remember that the Pentagon Papers and Watergate happened in the 1970s.",
+            desc:"A top-secret Department of Defense study that was leaked to the press. They revealed that multiple consecutive US administrations had lied to the public and even Congress about the scale of involvement in the Vietnam War."
+        },
+        "Nixon travels to China":{
+            reasonForDecade:"This was during Nixon's presidency (early 1970s).",
+            desc:"This was done to create diplomatic relations and gain leverage over the Soviet Union."
+        },
+        "Watergate":{
+            reasonForDecade:"Much corruption was exposed during Nixon's presidency (1970s). You can use that to remember that the Pentagon Papers and Watergate happened in the 1970s. Also, Watergate is something Nixon is very known for!",
+            desc:"It was discovered that a group of operatives working for Nixon broke into the Democratic National Committee HQ in D.C. to steal documents and plant devices."
+        },
+        "Title IX; ERA for ratification":{
+            reasonForDecade:"Many advancements for women's rights were made in the 1960s, but some-- like Roe v. Wade, Title IX, and the passage of the ERA in the Senate and the House-- were made in the 1970s as well.",
+            desc:""
+        },
+        "Roe v. Wade":{
+            reasonForDecade:"Many advancements for women's rights were made in the 1960s, but some-- like Roe v. Wade, Title IX, and the passage of the ERA in the Senate and the House-- were made in the 1970s as well.",
+            desc:"This was a landmark Supreme Court case upholding the constitutionality of a woman's choice to have an abortion."
+        },
+        "Nixon resigns":{
+            reasonForDecade:"Much corruption was exposed during Nixon's presidency (1970s). Especially Watergate-- and honestly, this was because of Watergate most of all.",
+            desc:""
+        },
+        "Moral Majority":{
+            reasonForDecade:"This can be linked to the rise of Christian fundamentalism which is also in this decade.",
+            desc:"This political organization, associated with Republican Christians on the right, promoted traditional, conservative Christian values."
+        },
+        "Iran hostage crisis":{
+            reasonForDecade:"",
+            desc:"As a response to the US granting asylum to the deposed Shah, 66 Americans were taken hostage at the US Embassy in Tehran. The last of the hostages left two years later in 1981."
+        },
+
     }
     let learnDiv:string=$state("display:none");
     let practiceDiv:string=$state("display:none");
@@ -1094,9 +1143,7 @@
     let clickable=$state(true);
 
     function startPractice(){
-        if(any1900schecked && type=="learn"){
-            alert("1900s haven't been finished in learn mode yet!! Please deselect all 1900s events...sorry...")
-        }else if(includedEvents.length>0){
+        if(includedEvents.length>0){
             for(let i of includedEvents){
                 for(let j of events[i]){
                     unusedTerms.push(j);
