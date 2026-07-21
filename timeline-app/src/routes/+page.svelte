@@ -1061,6 +1061,26 @@
         "AIDS epidemic":{
             reasonForDecade:"Honestly the way I remember this one is just the fact that it's so funny that the AIDS epidemic happened under Reagen of all people",
             desc:""
+        },
+        "Cold War ends, Soviet Union falls":{
+            reasonForDecade:"",
+            desc:"This was caused by unintended consequences resulting from the current leader's attempts at reform, military overspending, and the emergence of nationalism."
+        },
+        "Clinton impeached":{
+            reasonForDecade:"",
+            desc:"\"I did not have sexual relations with that woman\""
+        },
+        "9/11":{
+            reasonForDecade:"I feel like you should know when 9/11 was",
+            desc:"The infamous attack on the World Trade Center in 2001."
+        },
+        "beginning of War on Terror":{
+            reasonForDecade:"This was launched following 9/11.",
+            desc:"A US-led global campaign against terrorism."
+        },
+        "2008 Financial Crisis":{
+            reasonForDecade:"",
+            desc:""
         }
     }
     let learnDiv:string=$state("display:none");
