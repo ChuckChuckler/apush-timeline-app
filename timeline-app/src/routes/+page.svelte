@@ -5,6 +5,9 @@
     let includedEvents:string[]=$state([]);
     let includedPeriodsElements:any[]=$state([]);
 
+    let instantFeedback:boolean=$state(false);
+    let feedbackBoxVisible:boolean=$state(false);
+
     let display1600s:string=$state("display:none");
     let display1700s:string=$state("display:none");
     let display1800s:string=$state("display:none");
@@ -282,8 +285,12 @@
     };
 
     let eventsInformation:Record<string,eventInfo>={
+        "Enlightenment starts":{
+            reasonForDecade:"",
+            desc:""
+        },
         "British settlement of Jamestown":{
-            reasonForDecade:"It helps to memorize the years of some events. Jamestown was founded in 1607 (or very early 1600s). You can use this to create a general timeline of the events that follow.\nJamestown was the first British colony in America.",
+            reasonForDecade:"It helps to memorize the years of some events. Jamestown was founded in 1607 (or very early 1600s). You can use this to create a general timeline of the events that follow.",
             desc:"A.k.a the settlement of the first American colony."
         },
         "House of Burgesses":{
@@ -332,19 +339,19 @@
         },
         "Proclamation Line of 1763":{
             reasonForDecade:"my guy it's literally in the name",
-            desc:"Colonists wanted to move to new westward territory gained after the 7 Years' War. However, doing so would interfere with the indigenous tribes already living there. To avoid conflict, British Parliament passed the act creating this-- a boundary beyond which colonists were not allowed to settle. This angered colonists, and most did not comply, increasing tension between Britain and the American colonies."
+            desc:"Colonists wanted to move to new westward territory gained after the 7 Years' War. However, doing so would interfere with the indigenous tribes already living there. To avoid conflict, British Parliament passed the act creating this-- a boundary beyond which colonists were not allowed to settle."
         },
         "Sugar Act":{
             reasonForDecade:"This event is in the decade following the 7 Years' War. The 7 Years' War is what led to Britain tightening its control on the colonies. A good way to look at it is the 7 Years War --> Britain becoming more strict, colonists dissatisfied but not openly retaliating or considering independence --> Britain going further, colonists begin to retaliate and clamor for independence = 1700-60 --> 1760-69 --> 1770-79.",
-            desc:"This act reduced the tax on molasses, but imposed taxes on other goods. It was an attempt to stop smuggling, severely penalizing offenders and trying them in British-run courts. It can be linked to the end of salutary neglect. This upset colonists."
+            desc:"This act reduced the tax on molasses, but imposed taxes on other goods. It was an attempt to stop smuggling, severely penalizing offenders and trying them in British-run courts."
         },
         "Stamp Act":{
             reasonForDecade:"This event is in the decade following the 7 Years' War. The 7 Years' War is what led to Britain tightening its control on the colonies. A good way to look at it is the 7 Years War --> Britain becoming more strict, colonists dissatisfied but not openly retaliating or considering independence --> Britain going further, colonists begin to retaliate and clamor for independence = 1700-60 --> 1760-69 --> 1770-79.",
-            desc:"This act placed a tax on printed goods, including various papers, legal documents, magazines, newspapers, and playing cards. Colonists were angered by this, namely that the unfair tax was imposed on them without them being given representation in Parliament (taxation without representation)."
+            desc:"This act placed a tax on printed goods, including various papers, legal documents, magazines, newspapers, and playing cards."
         },
         "Townshend Acts":{
             reasonForDecade:"This event is in the decade following the 7 Years' War. The 7 Years' War is what led to Britain tightening its control on the colonies. A good way to look at it is the 7 Years War --> Britain becoming more strict, colonists dissatisfied but not openly retaliating or considering independence --> Britain going further, colonists begin to retaliate and clamor for independence = 1700-60 --> 1760-69 --> 1770-79.",
-            desc:"Four acts passed by British Parliament. The main purpose of these acts was to assert supreme authority over the colonies. They imposed duties on goods like paper, paint, and glass, and made attempts to curb smuggling and enforce new tax policies, among other things. These increased tension between the colonists and the British."
+            desc:"Four acts passed by British Parliament. The main purpose of these acts was to assert supreme authority over the colonies. They imposed duties on goods like paper, paint, and glass, and made attempts to curb smuggling and enforce new tax policies, among other things."
         },
         "Boston Massacre":{
             reasonForDecade:"The 1770s were the peak of colonial resistance. This is the decade when colonists were fully tired of the British and began seeing independence as an option. The Boston Massacre could be seen as the catalyst that set the path to the Revolutionary War in motion-- and it was the first major event that started off the 1770s.",
@@ -352,19 +359,19 @@
         },
         "Tea Act":{
             reasonForDecade:"The 1770s were the peak of colonial resistance. This is the decade when colonists were fully tired of the British and began seeing independence as an option. The Tea Act was passed before and led to the Boston Tea Party.",
-            desc:"This act created a monopoly on tea dominated by the British East India Company. More importantly, although it lowered the price of tea, it maintained the taxes enforced by the Townshend Acts, implying the acceptance of \"taxation without representation\" should the colonists purchase. Many colonists understood and resented this implication."
+            desc:"This act created a monopoly on tea dominated by the British East India Company. More importantly, although it lowered the price of tea, it maintained the taxes enforced by the Townshend Acts, implying the acceptance of \"taxation without representation\" should the colonists purchase."
         },
         "Boston Tea Party":{
             reasonForDecade:"The 1770s were the peak of colonial resistance. This is the decade when colonists were thoroughly frustrated with the British and began seeing independence as an option. The Boston Tea Party followed the Tea Act-- a tax on tea-- and was fueled with the resentment still simmering from the Boston Massacre. The Intolerable Acts were later passed as a response to the Boston Tea Party.",
-            desc:"Angered by the Tea Act, a group of Bostonians disguised as Mohawk Indians crept aboard a British merchant ship and dumped thousands of pounds of tea into the harbor. This was illustrated as an act of patriotism by Bostonians and other colonists, and an unforgivable crime by the British."
+            desc:"Angered by the Tea Act, a group of Bostonians disguised as Mohawk Indians crept aboard a British merchant ship and dumped thousands of pounds of tea into the harbor."
         },
         "Intolerable Acts":{
             reasonForDecade:"The 1770s were the peak of colonial resistance. This is the decade when colonists were thoroughly frustrated with the British and began seeing independence as an option. The Intolerable Acts were passed in response to the Boston Tea Party, both to punish Massachusetts and to assert dominance over the colonies. The First Continental Congress was organized after the passage of these Acts.",
-            desc:"A collection of acts created to punish Massachusetts following the Boston Tea Party. It blockaded Boston Harbor and made it virtually useless until restitution was paid for the Boston Tea Party damages and gave control of Massachusetts directly to the crown; additionally, it passed a new and more powerful Quartering Act. These acts were seen as the final straw by many."
+            desc:"A collection of acts created to punish Massachusetts following the Boston Tea Party. It blockaded Boston Harbor and made it virtually useless until restitution was paid for the Boston Tea Party damages and gave control of Massachusetts directly to the crown; additionally, it passed a new and more powerful Quartering Act."
         },
         "First Continental Congress":{
             reasonForDecade:"The 1770s were the peak of colonial resistance. This is the decade when colonists were thoroughly frustrated with the British and began seeing independence as an option. The First Continental Congress was organized as a response to the Intolerable Acts.",
-            desc:"A group of delegates from every state except Georgia organized a meeting to discuss how to address and respond to Britain's increasing tyranny. They adopted the Suffolk Resolves-- which, among other things, organized a boycott of British goods until the Intolerable Acts were repealed-- and the Declaration and Resovles-- a statement including a bill of rights and a list of grievances. Neither were accepted by British Parliament."
+            desc:"A group of delegates from every state except Georgia organized a meeting to discuss how to address and respond to Britain's increasing tyranny. They adopted the Suffolk Resolves-- which, among other things, organized a boycott of British goods until the Intolerable Acts were repealed-- and the Declaration and Resovles-- a statement including a bill of rights and a list of grievances."
         },
         "Thomas Paine's \"Common Sense\"":{
             reasonForDecade:"The 1770s were the peak of colonial resistance. This is the decade when colonists were thoroughly frustrated with the British and began seeing independence as an option. \"Common Sense\" was the first widely known publication that pushed independence as the only solution for the colonists' struggle and British tyranny, and it was imperative in shifting the majority of public opinion in favor of independence.",
@@ -372,7 +379,7 @@
         },
         "Lexington and Concord":{
             reasonForDecade:"The Revolutionary War started and ended in the 1770s, and this was its first battle. It was in the same decade as the Boston Massacre, the Boston Tea Party, and the passage of the Intolerable Acts-- all events building up to it.",
-            desc:"The first battle of the Revolutionary War."
+            desc:"The first battles of the Revolutionary War."
         },
         "Revolutionary War":{
             reasonForDecade:"The Revolutionary War is in the same decade as and a result of buildup from events like the Boston Massacre, the Boston Tea Party, and the Intolerable Acts.",
@@ -399,7 +406,7 @@
             desc:"This document established a system for settlers to purchase land in the west."
         },
         "Shays' Rebellion":{
-            reasonForDecade:"Following the end of the Revolutionary War, the newly-created United States spent this decade planning and organizing themselves. Shays' Rebellion was an imperative wake-up call, highlighting the weaknesses in the Articles of Confederatino and emphasizing the fact that a new constitution and means of governing was necessary.",
+            reasonForDecade:"Following the end of the Revolutionary War, the newly-created United States spent this decade planning and organizing themselves. Shays' Rebellion was an imperative wake-up call, highlighting the weaknesses in the Articles of Confederation and emphasizing the fact that a new constitution and means of governing was necessary.",
             desc:"Settlers in many states were victim to harsh debt. Legislatures failed to provide relief for the debt crisis. Angered, a group of violent dissenters in Massachusetts protested and physically attacked debt collectors. The rebellion was quelled with military force."
         },
         "Northwest Ordinance":{
@@ -1059,7 +1066,7 @@
             desc:"Reagan's economic policy involving supply-side economics, or trickle-down economics."
         },
         "AIDS epidemic":{
-            reasonForDecade:"Honestly the way I remember this one is just the fact that it's so funny that the AIDS epidemic happened under Reagen of all people",
+            reasonForDecade:"Honestly the way I remember this one is just the fact that it's so funny that the AIDS epidemic happened under Reagan of all people",
             desc:""
         },
         "Cold War ends, Soviet Union falls":{
@@ -1180,19 +1187,25 @@
                     unusedTerms.push(j);
                 }
             }
-            console.log(unusedTerms.length);
+
             if(type!="learn"){
                 practiceDiv="display:block";
                 settingsDiv="display:none";
                 practice("");
             }else{
-                learnDiv="display:block";
-                learn();
-                settingsDiv="display:none";
+                if(includedEvents.length==1&&includedEvents[0]=="Pre-1600"){
+                    alert("Hey!\nLearn mode can't be done with only pre-1600s! Sorry about that!");
+                }else{
+                    learnDiv="display:block";
+                    learn();
+                    settingsDiv="display:none";
+                }
             }
         }
     }
-    
+
+    let correctDecade:string=$state("");
+    let decadeHint:string=$state("");
     let resultsBtn = $state("display:none");
 
     function practice(customTerm:string){
@@ -1205,8 +1218,30 @@
             chosenEvent=customTerm;
             clickable=false;
         }else{
-            unusedTerms.length==0?chosenEvent="":chosenEvent=unusedTerms[Math.floor(Math.random()*unusedTerms.length)];
+            if(unusedTerms.length==0){
+                chosenEvent="";
+            }else{
+                chosenEvent=unusedTerms[Math.floor(Math.random()*unusedTerms.length)];
+            }
         }
+
+        if(Object.keys(eventsInformation).indexOf(chosenEvent)!=-1){
+            if(eventsInformation[chosenEvent].reasonForDecade!=""){
+                decadeHint=eventsInformation[chosenEvent].reasonForDecade;
+            }else{
+                decadeHint="";
+            }
+        }
+
+        let periodName:string="";
+        for(let i of includedEvents){
+            for(let j of events[i]){
+                if(j==chosenEvent){
+                    periodName=i;
+                }
+            }
+        }
+        correctDecade=periodName;
     }
 
     function classifyTerm(element:any){
@@ -1215,7 +1250,20 @@
             unusedTerms.indexOf(chosenEvent)==-1?unusedTerms.splice(unusedTerms.indexOf(chosenEvent),0):unusedTerms.splice(unusedTerms.indexOf(chosenEvent),1);
             element.addEvent(chosenEvent);
             clickable=true;
-            practice("");
+            if(instantFeedback){
+                for(let i of includedPeriodsElements){
+                    if(i.getEvents().includes(chosenEvent)){
+                        if(includedEvents[includedPeriodsElements.indexOf(i)]!=correctDecade){
+                            feedbackBoxVisible=true;
+                        }
+                    }
+                }
+                if(!feedbackBoxVisible){
+                    practice("");
+                }
+            }else{
+                practice("");
+            }
         }
     }
 
@@ -1229,11 +1277,9 @@
             let periodElements = includedPeriodsElements[i].getEvents();
             for(let j of periodElements){
                 if(events[period].includes(j)){
-                    console.log("correct!!!");
                     corrects.push(j);
                     resultsPeriods[i].addCorrect(j);
                 }else{
-                    console.log("incorrect..");
                     incorrects.push(j);
                     resultsPeriods[i].addIncorrect(j);
                 }
@@ -1392,12 +1438,29 @@
             nextButton = "display:block";
         }
     }
+
+    function liClick(eventClicked:string){
+        if(eventsInformation[eventClicked].reasonForDecade!=""){
+            feedbackBoxVisible=true;
+            let periodName:string="";
+            for(let i of includedEvents){
+                for(let j of events[i]){
+                    if(j==eventClicked){
+                        periodName=i;
+                        break;
+                    }
+                }
+            }
+            correctDecade=periodName;
+            decadeHint=eventsInformation[eventClicked].reasonForDecade;
+        }
+    }
 </script>
 
-<div class="bg-[#3C3B4B] h-[100vh] overflow-auto box-border p-[15px]">
+<div class="bg-[#3C3B4B] h-[100vh] overflow-auto box-border p-[15px] relative">
     <div class="m-auto" style={settingsDiv}> <!--settings-->
         <h1 class="text-center text-[#E4E4FF] istok-web-bold text text-[25px]">APUSH Timeline Practice App</h1>
-        <h3 class="text-center text-white kaisei-tokumin-regular">pre 1600s-1999</h3>
+        <h3 class="text-center text-white kaisei-tokumin-regular">pre 1600s-2008</h3>
         <br>
         <div class="bg-[#616077] rounded-[20px] pt-[15px] pb-[20px] w-[50%] m-auto">
             <h3 class="text-center text-white kaisei-tokumin-regular">practice type</h3>
@@ -1409,8 +1472,14 @@
                 </div>
                 <div>
                     <input class="accent-[#49437a]" type="radio" name="practice-type" value="test" id="test" bind:group={type} checked={true}>
-                    <label for="test" class="text-[#E7E7FB] text-[15px] kaisei-tokumin-regular">practice</label>
+                    <label for="test" class="text-[#E7E7FB] text-[15px] kaisei-tokumin-regular">timeline</label>
                 </div>
+            </div>
+            <br>
+            <div class="border-box p-[15px]">
+                <input class="accent-[#49437a]" type="checkbox" value="instant" id="instant" bind:checked={instantFeedback}>
+                <label for="test" class="text-[#E7E7FB] text-[15px] kaisei-tokumin-regular">instant feedback (timeline only)</label>
+                <p class="text-[#E7E7FB] text-[13px]">Check this box if you want instant feedback on what you got wrong; leave it unchecked if you want to treat this like a test.</p>
             </div>
         </div>
         <br>
@@ -1561,11 +1630,9 @@
                 <br>
                 <br>
 
-                <div class="hidden">
-                    <input bind:checked={check2000s} class="accent-[#49437a]" type="checkbox" name="2000-" id="2000-" value="2000-" onchange={function(){include("2000-", this.checked==undefined?false:this.checked)}}>
-                    <label for="2000-" class="arimo text-white text-[18px]">2000-</label>
-                    <br>
-                </div>
+                <input bind:checked={check2000s} class="accent-[#49437a]" type="checkbox" name="2000-" id="2000-" value="2000-" onchange={function(){include("2000-", this.checked==undefined?false:this.checked)}}>
+                <label for="2000-" class="arimo text-white text-[18px]">2000-</label>
+                <br>
             </div>
             <button class="block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" onclick={startPractice}>Go!</button>
         </div>
@@ -1614,6 +1681,19 @@
         </div>
     </div>
 
+    <div class="absolute w-[100%] h-[100%] left-0 top-0" style={feedbackBoxVisible?`display:block`:`display:none`}>
+        <div id="feedback-box" class="w-[40%] h-[50%] absolute right-2 bottom-2 bg-[#C4C1E6] rounded-[25px] border-box p-[15px] overflow-auto">
+            <button class="text-[15px] hover:underline" onclick={function(){
+                feedbackBoxVisible=false
+                practice("");
+            }}>I understand</button>
+            <h1 class="text-[#2E2A3D] text-center text-[20px] kaisei-tokumin-bold">Erm...that's not right...</h1>
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyOTFudmdwN25seXZyaXp2cmFmaDJsNWV4a21sYTIxZXF4eHIybGt2ZiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Cdkk6wFFqisTe/480w_s.jpg" alt="shocked cat" class="w-[50%] relative left-[25%]">
+            <p class="arimo text-center text-[20px]">This event belongs in {correctDecade}!</p>
+            <p class="arimo-thin">{decadeHint}</p>
+        </div>
+    </div>
+
     <div class="w-[80%] h-[95vh] m-auto bg-[#767493] rounded-[20px] box-border p-[15px] overflow-auto" style={practiceDiv}> <!--events classification-->
         <h1 class="text-center kaisei-tokumin-bold text-white text-[20px]">{chosenEvent}</h1>
         <button class=" block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" style={resultsBtn} onclick={showResults}>see results</button>
@@ -1630,12 +1710,12 @@
         <button class="mt-[5px] block m-auto bg-[#5e5c7a] text-white w-[20%] h-[30px] rounded-[15px] hover:bg-[#514f6b]" onclick={endPractice}>return home</button>
         <div class="grid grid-cols-3 gap-[15px] overflow-auto h-[95%] box-border p-[10px]">
             {#each includedEvents as period,i}
-                <ResultPeriod bind:this={resultsPeriods[i]} periodName={period} correctEvents={[]} incorrectEvents={[]} allInPeriod={events[period]}></ResultPeriod>
+                <ResultPeriod bind:this={resultsPeriods[i]} periodName={period} correctEvents={[]} incorrectEvents={[]} allInPeriod={events[period]} onclick={liClick}></ResultPeriod>
             {/each}
         </div>
     </div>
 
-    <p class="arimo-thin text-white text-center">v1.1.5</p>
+    <p class="arimo-thin text-white text-center">v1.2.0</p>
     <p class="arimo-thin text-white text-center"><a class="underline" target="_blank" href="https://github.com/ChuckChuckler/apush-timeline-app">github</a>- open source, please fork!! open issue if any bugs are found</p>
 
 </div>

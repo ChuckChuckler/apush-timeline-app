@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
 
-    let { periodName, correctEvents, incorrectEvents, allInPeriod } = $props();
+    let { periodName, correctEvents, incorrectEvents, allInPeriod, onclick } = $props();
 
     let corrects:string[] = $state([]);
     let incorrects:string[] = $state([]);
@@ -66,7 +66,7 @@
         {/each}
         <div style={incorrectDisplay}>
             {#each incorrects as e}
-                <li class="text-[#f58686] mb-[5px]">{e}</li>
+                <li class="text-[#f58686] mb-[5px] hover:underline" onclick={function(){onclick(e)}}>{e}</li>
             {/each}
         </div>
 
